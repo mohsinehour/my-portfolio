@@ -9,7 +9,7 @@ import { ArrowUpRight } from 'lucide-react';
 function Strip() {
   return (
     <section className="bg-ivory/75 px-5 py-3 shadow-[0_8px_30px_rgba(17,17,17,0.1)] backdrop-blur-xl my-8">
-      <div className="strip flex whitespace-nowrap text-primary text-sm tracking-wider md:text-md">
+      <div className="strip flex whitespace-nowrap text-primary text-sm tracking-wider md:text-md [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]">
         {[...Array(3)].map((_, group) => (
           <div key={group} className="strip-track flex items-center gap-8 pr-8">
             {["3+ Years Experience", "Startup Founder", "Product Designer", "Full-Stack Developer"].map((item) => (
@@ -27,7 +27,7 @@ function Strip() {
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch">
           {/* left side */}
@@ -37,11 +37,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-full"
           >
-            <div className="relative rounded-3xl overflow-hidden p-0.5 border-white/40 shadow-[0_0_10px_rgba(17,17,17,0.15)] z-10 mb-10 md:mb-0 max-w-full h-[400px] md:max-w-[540px] md:h-full">
+            <div className="relative rounded-3xl overflow-hidden p-0.5 border-white/40 shadow-[0_0_10px_rgba(17,17,17,0.15)] z-10 mb-10 md:mb-0 max-w-full h-[300px] md:max-w-[540px] md:h-full">
               <img
                 src={heroImage}
                 alt="Mohsine Hourmat Allah"
-                className="w-full object-cover rounded-[23px] h-[400px] md:h-[570px]"
+                className="w-full object-cover rounded-[23px] h-[300px] md:h-[570px]"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x800?text=Hero+Image';
                 }}
@@ -61,7 +61,7 @@ export default function Hero() {
               <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#004F94]/20 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob -z-10 pointer-events-none"></div>
 
               <img src={helloTag} alt="" className='max-w-30 mb-5 ' />
-              <h1 className="text-4xl font-semibold text-primary mb-6">
+              <h1 className="text-2xl  md:text-4xl font-semibold text-primary mb-6">
                 I'm Mohsine Hourmat Allah,
                 <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">

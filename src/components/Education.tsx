@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Calendar, ExternalLink, GraduationCap, MousePointerClick } from 'lucide-react';
 import fstLogo from '../assets/education-certifications/fst-logo.png';
@@ -57,8 +58,14 @@ const certifications = [
 ];
 
 export default function Education() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+
+  const toggleFlip = (index: number) => {
+    setFlippedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <section id="education" className="py-20 bg-background">
+    <section id="education" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +86,7 @@ export default function Education() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* EDUCATION */}
           <div className="flex flex-col gap-5">
-            <h3 className="flex items-center gap-2 text-xl font-bold text-primary mb-4"><GraduationCap size={24} className="text-brand" /> Academic Education</h3>
+            <h3 className="flex items-center gap-2 text-xl font-bold text-primary"><GraduationCap size={24} className="text-brand" /> Academic Education</h3>
             {education.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -107,74 +114,87 @@ export default function Education() {
             ))}
           </div>
 
-          {/* CERTIFICATIONS — flip cards */}
+          {/* CERTIFICATIONS — flip cards (hover on desktop, tap on mobile) */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2"><Award size={24} className="text-brand" /> Certifications</h3>
-            {certifications.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group [perspective:1200px] h-58"
-              >
-                <div className="relative w-full h-full [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
+            <h3 className="text-xl font-bold text-primary flex items-center gap-2"><Award size={24} className="text-brand" /> Certifications</h3>
+            {certifications.map((item, index) => {
+              const isFlipped = flippedIndex === index;
 
-                  {/* FRONT — image background */}
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  onClick={() => toggleFlip(index)}
+                  className="group [perspective:1200px] h-58 cursor-pointer md:cursor-default"
+                >
                   <div
-                    className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden shadow-sm border border-gray-100"
-                    style={{
-                      backgroundImage: `url(${item.bgImage})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'top',
-                    }}
+                    className={`relative w-full h-full [transform-style:preserve-3d] transition-transform duration-500 md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? '[transform:rotateY(180deg)]' : ''
+                      }`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
 
-                    {/* Institution tag — top right */}
-                    <span className="absolute flex items-center gap-2 top-4 right-4 bg-primary text-gray-200 text-xs font-small px-3 py-1 rounded-full backdrop-blur-sm">
-                      <GraduationCap size={20} /> {item.institution}
-                    </span>
+                    {/* FRONT — image background */}
+                    <div
+                      className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden shadow-sm border border-gray-100"
+                      style={{
+                        backgroundImage: `url(${item.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'top',
+                      }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
 
-                    {/* Pulsing hover hint — bottom left */}
-                    <div className="absolute bottom-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/40" />
-                      <MousePointerClick size={14} className="relative text-white" />
-                    </div>
+                      {/* Institution tag — top right */}
+                      <span className="absolute flex items-center gap-2 top-4 right-4 bg-primary text-gray-200 text-xs font-small px-3 py-1 rounded-full backdrop-blur-sm">
+                        <GraduationCap size={20} /> {item.institution}
+                      </span>
 
-                    {/* Title + date — bottom left */}
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
-                      <p className="text-sm text-gray-200 flex items-center gap-2"><Calendar size={16} />{item.date}</p>
-                    </div>
-                  </div>
-
-                  {/* BACK — full info, same style as education card */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-start text-start justify-center">
-                    <div className="flex items-start justify-between w-full">
-                      <div className="w-16 h-16 rounded-lg mb-4 shadow-sm group-hover:scale-110 transition-transform duration-200">
-                        <img
-                          src={item.logo}
-                          alt={item.institution}
-                          className="w-full h-full object-contain rounded-lg"
-                          onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/80'; }}
-                        />
+                      {/* Pulsing hover/tap hint — bottom left */}
+                      <div className="absolute bottom-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/40" />
+                        <MousePointerClick size={14} className="relative text-white" />
                       </div>
-                      <a href={item.credential} target='_blank' rel='noopener noreferrer'>
-                        <div className="flex items-center gap-2 rounded-full px-3 py-1 shadow-sm  text-xs font-small text-gray-400 mb-1 hover:scale-105 hover:-translate-y-0.5 hover:text-white hover:bg-gradient-brand text-center transition-all duration-200">Show Credential <ExternalLink size={14} /></div>
-                      </a>
-                    </div>
-                    <div className='flex items-center justify-between text-sm text-brand w-full mb-2'>
-                      <p>{item.institution}</p>
-                      <p>{item.date}</p>
-                    </div>
-                    <p className="text-sm text-secondary">{item.description}</p>
-                  </div>
 
-                </div>
-              </motion.div>
-            ))}
+                      {/* Title + date — bottom left */}
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                        <p className="text-sm text-gray-200 flex items-center gap-2"><Calendar size={16} />{item.date}</p>
+                      </div>
+                    </div>
+
+                    {/* BACK — full info, same style as education card */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-start text-start justify-center">
+                      <div className="flex items-start justify-between w-full">
+                        <div className="w-16 h-16 rounded-lg mb-4 shadow-sm group-hover:scale-110 transition-transform duration-200">
+                          <img
+                            src={item.logo}
+                            alt={item.institution}
+                            className="w-full h-full object-contain rounded-lg"
+                            onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/80'; }}
+                          />
+                        </div>
+                        <a
+                          href={item.credential}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <div className="flex items-center gap-2 rounded-full px-3 py-1 shadow-sm  text-xs font-small text-gray-400 mb-1 hover:scale-105 hover:-translate-y-0.5 hover:text-white hover:bg-gradient-brand text-center transition-all duration-200">Show Credential <ExternalLink size={14} /></div>
+                        </a>
+                      </div>
+                      <div className='flex items-center justify-between text-sm text-brand w-full mb-2'>
+                        <p>{item.institution}</p>
+                        <p>{item.date}</p>
+                      </div>
+                      <p className="text-sm text-secondary">{item.description}</p>
+                    </div>
+
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

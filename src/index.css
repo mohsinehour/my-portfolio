@@ -33,3 +33,12 @@
   min-width: max-content;
   animation: strip 20s linear infinite;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

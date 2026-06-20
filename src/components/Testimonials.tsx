@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import kingChukwumere from '../assets/testimonials/king-lifeline.jpg';
 import anasOudadsse from '../assets/testimonials/anas-mycoach.jpeg';
 
@@ -18,47 +18,56 @@ const testimonials = [
   },
 ];
 
-const AUTOPLAY_INTERVAL = 5000;
+const AUTOPLAY_INTERVAL = 4000;
 
 export default function Testimonials() {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 = forward, -1 = backward
+  const isAutoScrolling = useRef(false);
 
-  const goToNext = useCallback(() => {
-    setDirection(1);
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+  const scrollToIndex = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / testimonials.length;
+    isAutoScrolling.current = true;
+    el.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
   }, []);
 
   const goToIndex = (index: number) => {
-    setDirection(index > activeIndex ? 1 : -1);
     setActiveIndex(index);
+    scrollToIndex(index);
   };
 
-  // Autoplay — infinite loop
+  // Autoplay — advances to next card, loops infinitely
   useEffect(() => {
-    const timer = setInterval(goToNext, AUTOPLAY_INTERVAL);
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % testimonials.length;
+        scrollToIndex(next);
+        return next;
+      });
+    }, AUTOPLAY_INTERVAL);
     return () => clearInterval(timer);
-  }, [goToNext]);
+  }, [scrollToIndex]);
 
-  const variants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 80 : -80,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir > 0 ? -80 : 80,
-      opacity: 0,
-    }),
-  };
+  // Manual scroll detection — updates activeIndex + dots when user scrolls by hand
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / testimonials.length;
+    const index = Math.round(el.scrollLeft / cardWidth);
+    setActiveIndex(Math.min(Math.max(index, 0), testimonials.length - 1));
+  }, []);
 
-  const testimonial = testimonials[activeIndex];
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', handleScroll, { passive: true });
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,43 +86,39 @@ export default function Testimonials() {
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
-          {/* Card container — fixed height to prevent layout shift between cards */}
-          <div className="relative overflow-hidden min-h-[280px]">
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={activeIndex}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-                className="px-8 py-6 rounded-3xl glass-card relative"
-              >
-                {/* Quote mark decoration */}
-                <div className="absolute top-8 left-8 text-6xl text-gray-100 font-serif leading-none select-none">"</div>
+          {/* Carousel — horizontal scroll-snap */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]"
+          >
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="w-full shrink-0 snap-center px-1">
+                <div className="px-8 py-6 rounded-3xl glass-card relative min-h-[280px]">
+                  {/* Quote mark decoration */}
+                  <div className="absolute top-8 left-8 text-6xl text-gray-100 font-serif leading-none select-none">"</div>
 
-                <div className="relative z-10 mt-10">
-                  <p className="text-primary text-md leading-snug mb-6">
-                    {testimonial.content}
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 bg-gray-100">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=0D8ABC&color=fff`; }}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-primary">{testimonial.name}</h4>
-                      <p className="text-sm text-secondary">{testimonial.role}</p>
+                  <div className="relative z-10 mt-10">
+                    <p className="text-primary text-md leading-snug mb-6">
+                      {testimonial.content}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 bg-gray-100">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                          onError={(e) => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=0D8ABC&color=fff`; }}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-primary">{testimonial.name}</h4>
+                        <p className="text-sm text-secondary">{testimonial.role}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            ))}
           </div>
 
           {/* Dot navigation */}

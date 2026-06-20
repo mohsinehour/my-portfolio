@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
     return (
-        <section id="about" className="py-6 md:py-12">
+        <section id="about" className="pb-20 pt-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -72,21 +72,21 @@ export default function About() {
                     </div>
 
                 </div>
-                <div className='grid grid-cols-3 gap-8 items-stretch mt-6'>
+                <div className='grid grid-cols-3 gap-4 md:gap-8 items-stretch mt-6'>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-5"
+                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
                     >
-                        <h2 className='text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
                             4+
                         </h2>
-                        <h3 className="text-md bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
-                            Product Built
+                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
+                            Products Built
                         </h3>
                         <Package className='w-8 h-8 text-brand' />
                     </motion.div>
@@ -96,13 +96,13 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-5"
+                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
                     >
-                        <h2 className='text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
                             3+
                         </h2>
-                        <h3 className="text-md bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
+                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
                             Years of Experience
                         </h3>
                         <Award className='w-8 h-8 text-brand' />
@@ -113,13 +113,13 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-5"
+                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
                     >
-                        <h2 className='text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
                             100%
                         </h2>
-                        <h3 className="text-md bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
+                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
                             Founder Mindset
                         </h3>
                         <Sprout className='w-8 h-8 text-brand' />

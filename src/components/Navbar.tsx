@@ -41,7 +41,7 @@ export default function Navbar() {
         }}
         transition={{ duration: 0.1 }}>
         {isOpen && (
-          <div className="md:hidden glass-nav absolute top-20 left-0 right-0 bg-white/95 rounded-3xl">
+          <div className="md:hidden glass-nav absolute top-20 left-0 right-0 mx-4 bg-white/95 rounded-3xl">
             <div className="px-4 pt-2 pb-4 space-y-1 flex flex-col shadow-lg border-t border-gray-100">
               <a href="#about" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>About</a>
               <a href="#experience" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>Experience</a>

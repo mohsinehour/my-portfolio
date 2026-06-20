@@ -161,7 +161,7 @@ export default function CaseStudies() {
               <div className="p-8">
                 <div className="grid grid-cols-3 gap-4 mb-10">
                   {activeStudy.metrics.map((metric, i) => (
-                    <div key={i} className="text-center p-4 rounded-2xl border border-gray-100 bg-gray-50">
+                    <div key={i} className="text-center p-2 md:p-4 rounded-2xl border border-gray-100 bg-gray-50">
                       <h4 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-1">{metric.value}</h4>
                       <p className="text-sm font-medium text-secondary">{metric.label}</p>
                     </div>
