@@ -60,13 +60,12 @@ export default function Experience() {
           className="mb-16"
         >
           <div className='flex justify-start mb-5'>
-            <h2 className="text-md tracking-widest font-medium uppercase bg-clip-text text-transparent "
-              style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #364a65ff 100%)' }}>
+            <h2 className="text-md tracking-widest font-medium uppercase text-brand">
               Experience
             </h2>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Where I've Built & Shipped <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-[#364a65ff]">Products</span>
+            Where I've Built & Shipped <span className="text-brand">Products</span>
           </h2>
         </motion.div>
 
@@ -86,7 +85,7 @@ export default function Experience() {
                 />
               </div>
 
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-gray-700 backdrop-blur-sm hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/40 ease-in-out duration-200 cursor-pointer">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-gray-700 backdrop-blur-sm hover:scale-101 ease-in-out duration-200 cursor-pointer">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-primary">{exp.company}</h3>

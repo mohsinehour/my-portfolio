@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import heroImage from '../assets/hero/hero-image.jpg';
 import helloTag from '../assets/hero/hello-tag.svg';
 import linkedinIcon from '../assets/hero/linkedin-icon.svg';
+import twitterIcon from '../assets/hero/twitter-icon.svg';
 import githubIcon from '../assets/hero/github-icon.svg';
 import mailIcon from '../assets/hero/mail-icon.svg';
 import { ArrowUpRight } from 'lucide-react';
@@ -27,7 +28,7 @@ function Strip() {
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-8 md:pt-32 md:pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch">
           {/* left side */}
@@ -60,7 +61,7 @@ export default function Hero() {
               {/* Decorative background blob */}
               <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#004F94]/20 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob -z-10 pointer-events-none"></div>
 
-              <img src={helloTag} alt="" className='max-w-30 mb-5 ' />
+              <img src={helloTag} alt="" className='max-w-20 md:max-w-30 mb-2 md:mb-5 ' />
               <h1 className="text-2xl  md:text-4xl font-semibold text-primary mb-6">
                 I'm Mohsine Hourmat Allah,
                 <br />
@@ -73,24 +74,27 @@ export default function Hero() {
               </p>
               <div className=" flex justify-center">
                 <div className="flex items-center justify-center gap-4 px-2 py-2 w-fit">
-                  <a href="#work" className="bg-gradient-brand text-white px-8 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200">
+                  <a href="#work" className="bg-gradient-brand text-white px-6 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200">
                     View My Work
                   </a>
-                  <a href="#contact" className="inline-flex items-center gap-2 bg-white text-primary border border-gray-200 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
+                  <a href="#contact" className="inline-flex items-center gap-2 bg-white text-primary border border-gray-200 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
                     Let's Talk <ArrowUpRight size={16} />
                   </a>
                 </div>
               </div>
 
-              <div className="mt-12 flex justify-center gap-4">
-                <a href='https://www.linkedin.com/in/mohsine-hourmat-allah/' target='_blank' rel='noopener noreferrer' className='group flex items-center gap-2 px-4 py-4 rounded-full shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
-                  <img src={linkedinIcon} alt="LinkedIn" className='w-8 h-8 text-brand transform group-hover:scale-110 duration-200' />
+              <div className="mt-6 md:mt-12 flex justify-center gap-6">
+                <a href='https://www.linkedin.com/in/mohsine-hourmat-allah/' target='_blank' rel='noopener noreferrer' className='group flex items-center gap-2 px-4 py-4 rounded-2xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
+                  <img src={linkedinIcon} alt="LinkedIn" className='w-6 h-6 text-brand transform group-hover:scale-105 duration-200' />
                 </a>
-                <a href='https://github.com/mohsinehour' target='_blank' rel='noopener noreferrer' className='group flex items-center gap-2 px-4 py-4 rounded-full shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
-                  <img src={githubIcon} alt="GitHub" className='w-8 h-8 text-brand transform group-hover:scale-110 duration-200' />
+                <a href='https://x.com/mohsinehour_' target='_blank' rel='noopener noreferrer' className='group flex items-center gap-2 px-4 py-4 rounded-2xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
+                  <img src={twitterIcon} alt="Twitter" className='w-6 h-6 text-brand transform group-hover:scale-105 duration-200' />
                 </a>
-                <a href='mailto:hourmatallahmohsine@gmail.com' className='group flex items-center gap-2 px-4 py-4 rounded-full shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
-                  <img src={mailIcon} alt="Mail" className='w-8 h-8 text-brand transform group-hover:scale-110 duration-200' />
+                <a href='https://github.com/mohsinehour' target='_blank' rel='noopener noreferrer' className='group flex items-center gap-2 px-4 py-4 rounded-2xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
+                  <img src={githubIcon} alt="GitHub" className='w-6 h-6 text-brand transform group-hover:scale-105 duration-200' />
+                </a>
+                <a href='mailto:hourmatallahmohsine@gmail.com' className='group flex items-center gap-2 px-4 py-4 rounded-2xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] backdrop-blur-xl w-fit whitespace-nowrap transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 cursor-pointer'>
+                  <img src={mailIcon} alt="Mail" className='w-6 h-6 text-brand transform group-hover:scale-105 duration-200' />
                 </a>
               </div>
             </div>

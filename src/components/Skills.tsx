@@ -68,12 +68,13 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.2, delay: index * 0.001 }}
-              whileHover={{ scale: 1.1, filter: 'saturate(1.5)' }}
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+              whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
               className="flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 glass-card rounded-2xl p-4 group cursor-pointer"
+              style={{ willChange: "transform" }}
             >
               <img
                 src={skill.icon}

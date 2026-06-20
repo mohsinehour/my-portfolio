@@ -44,14 +44,16 @@ const cards = [
 function StartupCard({ startup, index }: { startup: typeof cards[number]; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group bg-gray-800/50 border border-gray-700 rounded-2xl p-6 hover:scale-[1.04] hover:shadow-lg hover:shadow-blue-500/20 ease-in-out duration-200 cursor-pointer"
+      initial={{ opacity: 0, scale: 0.95, y: 10 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+      whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
+      className="group bg-gray-800/50 border border-gray-700 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer"
+      style={{ willChange: "transform" }}
     >
-      <div className="w-12 h-12 bg-[#0088FF]/10 text-brand rounded-xl mb-6 flex items-center justify-center font-bold transition-all duration-200 group-hover:scale-110 group-hover:-translate-y-1 group-hover:border-brand group-hover:border-2">
-        <div className="group-hover:scale-110 transition-all duration-200">
+      <div className="w-12 h-12 bg-[#0088FF]/10 text-brand rounded-xl mb-6 flex items-center justify-center font-bold transition-transform duration-200 group-hover:scale-110 group-hover:-translate-y-1 group-hover:outline-2 group-hover:outline-brand">
+        <div className="group-hover:scale-105 transition-transform duration-200">
           {startup.icon}
         </div>
       </div>
@@ -134,7 +136,7 @@ export default function Startups() {
               key={index}
               aria-label={`Go to card ${index + 1}`}
               onClick={() => goToIndex(index)}
-              className={`rounded-full transition-all duration-300 ${index === activeIndex ? 'w-6 h-2.5 bg-brand' : 'w-2.5 h-2.5 bg-gray-600'
+              className={`rounded-full transition-transform duration-300 ${index === activeIndex ? 'w-6 h-2.5 bg-brand' : 'w-2.5 h-2.5 bg-gray-600'
                 }`}
             />
           ))}

@@ -79,7 +79,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
+                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
@@ -88,7 +88,7 @@ export default function About() {
                         <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
                             Products Built
                         </h3>
-                        <Package className='w-8 h-8 text-brand' />
+                        <Package className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                     <motion.div
@@ -96,7 +96,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
+                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
@@ -105,7 +105,7 @@ export default function About() {
                         <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
                             Years of Experience
                         </h3>
-                        <Award className='w-8 h-8 text-brand' />
+                        <Award className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                     <motion.div
@@ -113,7 +113,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5"
+                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
@@ -122,7 +122,7 @@ export default function About() {
                         <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
                             Founder Mindset
                         </h3>
-                        <Sprout className='w-8 h-8 text-brand' />
+                        <Sprout className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                 </div>

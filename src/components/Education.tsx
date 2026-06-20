@@ -94,9 +94,9 @@ export default function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group flex flex-col items-start text-start"
+                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group hover:scale-102 cursor-pointer ease-in-out transition-transform duration-300 flex flex-col items-start text-start"
               >
-                <div className="w-16 h-16 p-1 rounded-lg mb-4 shadow-sm group-hover:scale-110 transition-transform duration-200">
+                <div className="w-16 h-16 p-1 rounded-lg mb-4 shadow-sm group-hover:scale-105 transition-transform duration-200">
                   <img
                     src={item.image}
                     alt={item.institution}
