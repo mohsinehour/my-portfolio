@@ -6,7 +6,7 @@ import alxLogo from '../assets/education-certifications/alx-logo.jpeg';
 import alxVenturesLogo from '../assets/education-certifications/alx-ventures-logo.png';
 import mckinseyLogo from '../assets/education-certifications/mckinsey-logo.png';
 import softwareEngineeringBg from '../assets/education-certifications/software-engineering.jpg';
-import mckinseyBg from '../assets/education-certifications/mckinsey.jpg';
+import mckinseyBg from '../assets/education-certifications/mcKinsey.jpg';
 import founderAcademyBg from '../assets/education-certifications/founder-academy.png';
 
 const education = [
