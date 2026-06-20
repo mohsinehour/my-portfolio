@@ -1,27 +1,48 @@
 import { motion } from 'framer-motion';
+import htmlIcon from '../assets/technical-experties/html.png';
+import cssIcon from '../assets/technical-experties/css.png';
+import javascriptIcon from '../assets/technical-experties/javascript.png';
+import typescriptIcon from '../assets/technical-experties/typescript.png';
+import reactIcon from '../assets/technical-experties/react.png';
+import tailwindIcon from '../assets/technical-experties/tailwind.png';
+import nodejsIcon from '../assets/technical-experties/nodejs.png';
+import phpIcon from '../assets/technical-experties/php.png';
+import laravelIcon from '../assets/technical-experties/laravel.png';
+import pythonIcon from '../assets/technical-experties/python.png';
+import mongodbIcon from '../assets/technical-experties/mongodb.png';
+import mysqlIcon from '../assets/technical-experties/mysql.png';
+import postmanIcon from '../assets/technical-experties/postman.png';
+import gitIcon from '../assets/technical-experties/git.png';
+import githubIcon from '../assets/technical-experties/github.png';
+import linuxIcon from '../assets/technical-experties/linux.png';
+import figmaIcon from '../assets/technical-experties/figma.png';
+import notionIcon from '../assets/technical-experties/notion.png';
+import cursorIcon from '../assets/technical-experties/cursor.png';
+import claudeIcon from '../assets/technical-experties/claude.png';
+import geminiIcon from '../assets/technical-experties/gemini.png';
 
 const skills = [
-  { name: 'HTML5', icon: '/src/assets/technical-experties/html.png' },
-  { name: 'CSS3', icon: '/src/assets/technical-experties/css.png' },
-  { name: 'JavaScript', icon: '/src/assets/technical-experties/javascript.png' },
-  { name: 'TypeScript', icon: '/src/assets/technical-experties/typescript.png' },
-  { name: 'React', icon: '/src/assets/technical-experties/react.png' },
-  { name: 'Tailwind', icon: '/src/assets/technical-experties/tailwind.png' },
-  { name: 'Node.js', icon: '/src/assets/technical-experties/nodejs.png' },
-  { name: 'PHP', icon: '/src/assets/technical-experties/php.png' },
-  { name: 'Laravel', icon: '/src/assets/technical-experties/laravel.png' },
-  { name: 'Python', icon: '/src/assets/technical-experties/python.png' },
-  { name: 'MongoDB', icon: '/src/assets/technical-experties/mongodb.png' },
-  { name: 'MySQL', icon: '/src/assets/technical-experties/mysql.png' },
-  { name: 'Postman', icon: '/src/assets/technical-experties/postman.png' },
-  { name: 'Git', icon: '/src/assets/technical-experties/git.png' },
-  { name: 'GitHub', icon: '/src/assets/technical-experties/github.png' },
-  { name: 'Linux', icon: '/src/assets/technical-experties/linux.png' },
-  { name: 'Figma', icon: '/src/assets/technical-experties/figma.png' },
-  { name: 'Notion', icon: '/src/assets/technical-experties/notion.png' },
-  { name: 'Cursor', icon: '/src/assets/technical-experties/cursor.png' },
-  { name: 'Claude', icon: '/src/assets/technical-experties/claude.png' },
-  { name: 'Gemini', icon: '/src/assets/technical-experties/gemini.png' }
+  { name: 'HTML5', icon: htmlIcon },
+  { name: 'CSS3', icon: cssIcon },
+  { name: 'JavaScript', icon: javascriptIcon },
+  { name: 'TypeScript', icon: typescriptIcon },
+  { name: 'React', icon: reactIcon },
+  { name: 'Tailwind', icon: tailwindIcon },
+  { name: 'Node.js', icon: nodejsIcon },
+  { name: 'PHP', icon: phpIcon },
+  { name: 'Laravel', icon: laravelIcon },
+  { name: 'Python', icon: pythonIcon },
+  { name: 'MongoDB', icon: mongodbIcon },
+  { name: 'MySQL', icon: mysqlIcon },
+  { name: 'Postman', icon: postmanIcon },
+  { name: 'Git', icon: gitIcon },
+  { name: 'GitHub', icon: githubIcon },
+  { name: 'Linux', icon: linuxIcon },
+  { name: 'Figma', icon: figmaIcon },
+  { name: 'Notion', icon: notionIcon },
+  { name: 'Cursor', icon: cursorIcon },
+  { name: 'Claude', icon: claudeIcon },
+  { name: 'Gemini', icon: geminiIcon }
 ];
 
 export default function Skills() {

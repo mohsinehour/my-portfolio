@@ -1,18 +1,20 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import kingChukwumere from '../assets/testimonials/king-lifeline.jpg';
+import anasOudadsse from '../assets/testimonials/anas-mycoach.jpeg';
 
 const testimonials = [
   {
     name: 'King Chukwumere',
     role: 'CEO, LifeLine Africa',
     content: "Working with Mohsine was the best decision we made. He delivered a complex healthcare platform on time and exceeding our expectations. His attention to UX details and scalable architecture is outstanding.",
-    image: '/src/assets/testimonials/king-lifeline.jpg'
+    image: kingChukwumere,
   },
   {
     name: 'Anas Oudadsse',
     role: 'CTO, MYCOACH',
     content: "Mohsine is exceptional. He didn't just build our product; he helped shape our entire business strategy. His technical skills are matched only by his understanding of product-market fit. A true asset to any founding team.",
-    image: '/src/assets/testimonials/anas-mycoach.jpeg'
+    image: anasOudadsse,
   },
 ];
 

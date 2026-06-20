@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
+import mycoachLogo from '../assets/experience/mycoach-logo.png';
+import vouchifyLogo from '../assets/experience/vouchify-logo.png';
+import lifelineLogo from '../assets/experience/lifeline-logo.png';
 
 const experiences = [
   {
     company: 'MYCOACH',
-    logo: '/src/assets/experience/mycoach-logo.png',
+    logo: mycoachLogo,
     role: 'Co-Founder & CEO',
     date: 'Jan 2025 - Present',
     description: 'Founded and built a coaching marketplace platform from zero — leading product strategy, UX design, full-stack engineering, and business operations.',
@@ -17,7 +20,7 @@ const experiences = [
   },
   {
     company: 'VOUCHIFY',
-    logo: '/src/assets/experience/vouchify-logo.png',
+    logo: vouchifyLogo,
     role: 'Product Designer & Web Developer',
     date: 'January 2026 - Present',
     description: 'Developed the web platform for a digital membership and voucher management system that helps businesses retain customers through wallet-based loyalty programs.',
@@ -31,7 +34,7 @@ const experiences = [
   },
   {
     company: 'LifeLine',
-    logo: '/src/assets/experience/lifeline-logo.png',
+    logo: lifelineLogo,
     role: 'Front-End Developer & UI/UX Designer',
     date: 'July 2024 - December 2025',
     description: 'Led product design and engineering for a comprehensive HealthTech platform connecting patients, pharmacies, and insurance providers across Africa.',

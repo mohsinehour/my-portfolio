@@ -1,13 +1,16 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { X, ExternalLink, ArrowUpRight } from 'lucide-react';
+import mycoachCaseStudyImage from '../assets/featured-work/mycoach-casestudy.png';
+import vouchifyCaseStudyImage from '../assets/featured-work/vouchify-casestudy.png';
+import lifelineCaseStudyImage from '../assets/featured-work/lifeline-casestudy.png';
 
 const caseStudies = [
   {
     id: 'mycoach',
     title: 'MYCOACH',
     subtitle: 'Coaching Marketplace Platform',
-    image: '/src/assets/featured-work/mycoach-casestudy.png',
+    image: mycoachCaseStudyImage,
     metrics: [
       { label: 'Users', value: '1000+' },
       { label: 'Booking Rate', value: '89%' },
@@ -25,7 +28,7 @@ const caseStudies = [
     id: 'vouchify',
     title: 'VOUCHIFY',
     subtitle: 'Digital Membership & Voucher',
-    image: '/src/assets/featured-work/vouchify-casestudy.png',
+    image: vouchifyCaseStudyImage,
     metrics: [
       { label: 'Active Widgets', value: '500+' },
       { label: 'Conversion Lift', value: '+24%' },
@@ -43,7 +46,7 @@ const caseStudies = [
     id: 'lifeline',
     title: 'LifeLine',
     subtitle: 'Health-Tech Platform',
-    image: '/src/assets/featured-work/lifeline-casestudy.png',
+    image: lifelineCaseStudyImage,
     metrics: [
       { label: 'Patients', value: '50K+' },
       { label: 'Hospitals', value: '12' },

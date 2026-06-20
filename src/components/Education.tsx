@@ -1,5 +1,13 @@
 import { motion } from 'framer-motion';
 import { Award, Calendar, ExternalLink, GraduationCap, MousePointerClick } from 'lucide-react';
+import fstLogo from '../assets/education-certifications/fst-logo.png';
+import fedeLogo from '../assets/education-certifications/fede-logo.png';
+import alxLogo from '../assets/education-certifications/alx-logo.jpeg';
+import alxVenturesLogo from '../assets/education-certifications/alx-ventures-logo.png';
+import mckinseyLogo from '../assets/education-certifications/mckinsey-logo.png';
+import softwareEngineeringBg from '../assets/education-certifications/software-engineering.jpg';
+import mckinseyBg from '../assets/education-certifications/mckinsey.jpg';
+import founderAcademyBg from '../assets/education-certifications/founder-academy.png';
 
 const education = [
   {
@@ -7,14 +15,14 @@ const education = [
     institution: 'MIAGE Casablanca | FEDE',
     date: '2024 - 2026',
     description: 'Advanced study in AI systems, machine learning, big data architectures, and intelligent application design',
-    image: '/src/assets/education-certifications/fede-logo.png',
+    image: fedeLogo,
   },
   {
     title: 'Bachelor in Automation Engineering',
     institution: 'FST Settat',
     date: '2016 - 2017',
     description: 'Foundation in systems engineering, control systems, and automation — building analytical and technical problem-solving skills',
-    image: '/src/assets/education-certifications/fst-logo.png',
+    image: fstLogo,
   }
 ];
 
@@ -24,8 +32,8 @@ const certifications = [
     institution: 'ALX Africa',
     date: 'November 2024',
     description: 'Intensive 12-month program covering full-stack development, algorithms, system design, and engineering best practices',
-    bgImage: '/src/assets/education-certifications/software-engineering.jpg',
-    logo: '/src/assets/education-certifications/alx-logo.jpeg',
+    bgImage: softwareEngineeringBg,
+    logo: alxLogo,
     credential: "https://intranet.alxswe.com/certificates/N5YnzP8frB",
   },
   {
@@ -33,8 +41,8 @@ const certifications = [
     institution: 'McKinsey & Company',
     date: 'July 2024',
     description: 'Selected for McKinsey\'s leadership and problem-solving program for high-potential individuals from emerging markets',
-    bgImage: '/src/assets/education-certifications/mckinsey.jpg',
-    logo: '/src/assets/education-certifications/mckinsey-logo.png',
+    bgImage: mckinseyBg,
+    logo: mckinseyLogo,
     credential: "https://www.credly.com/badges/186b2104-af1a-4f5c-a200-f28ffde61ee7/",
   },
   {
@@ -42,8 +50,8 @@ const certifications = [
     institution: 'ALX Ventures',
     date: 'July 2024',
     description: 'Startup fundamentals — product-market fit, fundraising, go-to-market strategy, and founding team dynamics',
-    bgImage: '/src/assets/education-certifications/founder-academy.png',
-    logo: '/src/assets/education-certifications/alx-ventures-logo.png',
+    bgImage: founderAcademyBg,
+    logo: alxVenturesLogo,
     credential: "https://intranet.alxswe.com/certificates/L7Nrme6XHM",
   },
 ];
