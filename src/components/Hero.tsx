@@ -4,7 +4,7 @@ import helloTag from '../assets/hero/hello-tag.svg';
 import linkedinIcon from '../assets/hero/linkedin-icon.svg';
 import githubIcon from '../assets/hero/github-icon.svg';
 import mailIcon from '../assets/hero/mail-icon.svg';
-import { ArrowUpRight, CodeXml, Layers, Package, Rocket, Star, Zap } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 function Strip() {
   return (

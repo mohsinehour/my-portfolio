@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Award, Building, Calendar, ExternalLink, GraduationCap, MousePointerClick, RefreshCw } from 'lucide-react';
+import { Award, Calendar, ExternalLink, GraduationCap, MousePointerClick } from 'lucide-react';
 
 const education = [
   {

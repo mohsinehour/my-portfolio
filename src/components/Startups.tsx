@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Zap, Brain, Layers, Users, TrendingUp, Store, ArrowUpRight } from 'lucide-react';
+import { Target, Zap, Brain, Layers, TrendingUp, Store, ArrowUpRight } from 'lucide-react';
 
 const cards = [
   {
