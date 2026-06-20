@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply font-sans text-primary bg-background antialiased overflow-x-hidden scroll-smooth;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm;
+}
+
+.glass-card {
+  @apply bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-md transition-shadow duration-300;
+}
+
+@keyframes strip {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.strip {
+  overflow: hidden;
+}
+
+.strip-track {
+  min-width: max-content;
+  animation: strip 20s linear infinite;
+}
