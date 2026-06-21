@@ -47,7 +47,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,11 +68,11 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, delay: index * 0.08, ease: "easeOut" } }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-              whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
+              whileHover={{ scale: 1.05, y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
               className="flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 glass-card rounded-2xl p-4 group cursor-pointer"
               style={{ willChange: "transform" }}
             >

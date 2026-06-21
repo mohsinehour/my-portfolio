@@ -30,7 +30,7 @@ const experiences = [
       'Developed merchant dashboard with analytics',
       'Shipped mobile-first PWA for end users'
     ],
-    skills: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
+    skills: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS']
   },
   {
     company: 'LifeLine',
@@ -44,7 +44,7 @@ const experiences = [
       'Integrated insurance claim verification system',
       'Achieved 98% user satisfaction on first release'
     ],
-    skills: ['Figma', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
+    skills: ['Figma', 'React', 'Tailwind CSS']
   }
 ];
 
@@ -80,7 +80,7 @@ export default function Experience() {
               className="group relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
             >
               <div className="flex items-center justify-center w-12 h-12 rounded-lg shadow-[0_0px_5px_rgba(17,17,17,0.15)] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 overflow-hidden z-10 hover:scale-[1.1] hover:shadow-lg hover:shadow-blue-500/20 ease-in-out duration-200 cursor-pointer">
-                <img src={exp.logo} alt={`${exp.company} Logo`} className="w-full h-full rounded-lg object-contain"
+                <img src={exp.logo} alt={`${exp.company} Logo`} className="w-full h-full rounded-xl object-contain"
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/40'; }}
                 />
               </div>

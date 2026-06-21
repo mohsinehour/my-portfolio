@@ -1,5 +1,5 @@
 import { Award, Package, Quote, Sprout } from 'lucide-react';
-import aboutImage from '../assets/about-image.jpeg';
+import aboutImage from '../assets/about-image1.jpg';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -47,21 +47,19 @@ export default function About() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="relative isolate"
                         >
-                            <div className="relative rounded-2xl overflow-hidden w-[400px] h-[450px]">
-                                {/* Image */}
+                            {/* Ambient glow behind the card */}
+                            <div className="absolute inset-0 -z-10 rounded-2xl bg-[#004F94]/60 blur-3xl scale-85 translate-y-4 pointer-events-none" />
+
+                            <div className="relative z-10 rounded-2xl overflow-hidden w-[400px] h-[450px]">
                                 <img
                                     src={aboutImage}
                                     alt=""
                                     className="w-full h-full object-cover"
                                 />
-
-                                {/* Inner bottom shadow overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                                {/* Quote text */}
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                                    {/* Quote mark */}
                                     <Quote className='w-8 h-8 text-white mb-2 rotate-180' />
                                     <p className="text-white text-sm leading-relaxed">
                                         I don't just design screens or write code. I think about the full product — the user's journey, the business model, the growth lever, the technical architecture. That's what makes the difference between good work and great work.
@@ -70,7 +68,6 @@ export default function About() {
                             </div>
                         </motion.div>
                     </div>
-
                 </div>
                 <div className='grid grid-cols-3 gap-4 md:gap-8 items-stretch mt-6'>
 
@@ -79,7 +76,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0 }}
-                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
@@ -96,7 +93,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
@@ -113,7 +110,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="group flex flex-col items-center justify-center rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
                         <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>

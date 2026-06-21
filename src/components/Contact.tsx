@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, ExternalLink, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 // Get your free access key at https://web3forms.com — paste it below
 const WEB3FORMS_ACCESS_KEY = 'f56a42a2-b730-4bfc-b02f-28b3197fc1b0';
@@ -73,12 +74,12 @@ export default function Contact() {
 
               <div className="space-y-6 mb-12">
                 <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 shrink-0 bg-white/10 rounded-full flex items-center justify-center">
-                    <Calendar size={20} className="text-white" />
+                  <div className="w-14 h-14 shrink-0 bg-white/10 rounded-full flex items-center justify-center">
+                    <Calendar size={24} className="text-white" />
                   </div>
                   <div>
-                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="text-md font-small hover:text-gray-200 hover:scale-102 transition-colors flex items-center gap-2">Book a Call <ExternalLink size={18} /></a>
-                    <p className="font-sm text-sm text-white">Schedule a 30 min call</p>
+                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:scale-105 hover:underline transition-transform duration-300 ease-in-out flex items-center gap-2">Book a Call <ExternalLink size={18} /></a>
+                    <p className="font-md text-md text-white">Schedule a 30 min call with me</p>
                   </div>
                 </div>
               </div>
@@ -90,7 +91,7 @@ export default function Contact() {
                     <FaLinkedin size={18} />
                   </a>
                   <a href="https://x.com/mohsinehour_" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors transform hover:-translate-y-1 duration-200">
-                    <FaTwitter size={18} />
+                    <FaXTwitter size={18} />
                   </a>
                   <a href="https://github.com/mohsinehour" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors transform hover:-translate-y-1 duration-200">
                     <FaGithub size={18} />
@@ -148,7 +149,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full py-4 bg-gradient-brand text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-blue-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="w-full py-4 bg-gradient-brand text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-blue-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
               >
                 {status === 'loading' ? 'Sending...' : 'Send Message'}
                 {status === 'idle' && <Send size={18} />}
