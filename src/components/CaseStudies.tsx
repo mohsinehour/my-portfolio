@@ -156,9 +156,9 @@ const caseStudies: CaseStudy[] = [
     solutionImage: lifelineSolutionImg,
     outcomeImage: lifelineOutcomeImg,
     metrics: [
-      { label: 'Patients', value: '50K+' },
-      { label: 'Hospitals', value: '12' },
-      { label: 'Uptime', value: '99.9%' },
+      { label: 'Healthcare Providers', value: '200+' },
+      { label: 'Transactions Processed', value: '14k+' },
+      { label: 'Countries', value: '5+' },
     ],
     overview: <>
       LifeLine is a healthcare platform designed to improve access to medical services through digital solutions that connect patients, healthcare providers, pharmacies, and insurers. The platform includes appointment booking, insurance workflows, pharmacy management tools, and patient engagement experiences.
@@ -288,7 +288,7 @@ export default function CaseStudies() {
                   className="w-full h-full object-cover object-top"
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/1200x600'; }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 md:p-8">
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex items-center gap-4 w-full">
                       <h2 className="text-4xl font-bold text-white">{activeStudy.title}</h2>
@@ -314,7 +314,7 @@ export default function CaseStudies() {
                   {activeStudy.metrics.map((metric, i) => (
                     <div key={i} className="text-center p-2 md:p-4 rounded-2xl border border-gray-100 bg-gray-50">
                       <h4 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-1">{metric.value}</h4>
-                      <p className="text-sm font-medium text-secondary">{metric.label}</p>
+                      <p className="text-sm md:font-medium text-secondary">{metric.label}</p>
                     </div>
                   ))}
                 </div>
