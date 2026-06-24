@@ -12,7 +12,14 @@ const icons = [
   <TrendingUp size={24} />
 ];
 
-function StartupCard({ startup, index }: { startup: any; index: number }) {
+interface StartupData {
+  title: string;
+  description: string;
+  tags: string[];
+  icon: React.ReactNode;
+}
+
+function StartupCard({ startup, index }: { startup: StartupData; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -33,7 +40,7 @@ function StartupCard({ startup, index }: { startup: any; index: number }) {
         {startup.description}
       </p>
       <div className="flex flex-wrap gap-2 mt-4">
-        {startup.tags.map((tag, i) => (
+        {startup.tags.map((tag: string, i: number) => (
           <span key={i} className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">
             {tag}
           </span>
@@ -45,8 +52,8 @@ function StartupCard({ startup, index }: { startup: any; index: number }) {
 
 export default function Startups() {
   const { t } = useTranslation();
-  const cardsData = t('startups.cards', { returnObjects: true }) as any[];
-  const cards = cardsData.map((c, i) => ({ ...c, icon: icons[i] }));
+  const cardsData = t('startups.cards', { returnObjects: true }) as Omit<StartupData, 'icon'>[];
+  const cards: StartupData[] = cardsData.map((c, i: number) => ({ ...c, icon: icons[i] }));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
