@@ -1,0 +1,413 @@
+{
+    "nav": {
+        "about": "À propos",
+        "experience": "Expérience",
+        "work": "Projets",
+        "skills": "Compétences",
+        "education": "Formation",
+        "contact": "Contact",
+        "letsTalk": "Discutons"
+    },
+    "hero": {
+        "tag": "Salut!",
+        "title": "Je suis Mohsine Hourmat Allah,",
+        "subtitle1": "Fondateur, Product Designer",
+        "subtitle2": "Développeur Full-Stack",
+        "description": "Je conçois et construis des produits numériques importants, des plateformes de marché aux applications SaaS. J'apporte la réflexion du fondateur à chaque projet que je touche.",
+        "viewWork": "Voir mes projets",
+        "bookACall": "Réserver un appel",
+        "strip": [
+            "3+ Ans d'Expérience",
+            "Fondateur de Startup",
+            "Product Designer",
+            "Développeur Full-Stack"
+        ]
+    },
+    "about": {
+        "title": "À propos de moi",
+        "subtitle1": "Je construis des produits comme un",
+        "subtitle2": "Fondateur,",
+        "subtitle3": "je conçois comme un",
+        "subtitle4": "Artiste",
+        "description1": "Je suis Product Designer, Développeur Full-Stack et Fondateur de Startup, avec une rare combinaison d'expertise technique et de sensibilité au design. Mon travail se situe à l'intersection de l'ingénierie, de la créativité et de l'entrepreneuriat.",
+        "description2": "Après avoir étudié l'ingénierie en automatisation et obtenu un Master européen en applications intelligentes et Big Data, j'ai réorienté mes objectifs vers la création de produits numériques qui résolvent de vrais problèmes — des plateformes HealthTech aux marketplaces de coaching propulsées par l'IA.",
+        "description3": "En tant que Co-fondateur et PDG de My Coach, j'ai porté toutes les casquettes possibles — stratégie produit, recherche UX, ingénierie et croissance. Cet esprit de fondateur guide tout ce que je conçois et construis.",
+        "quote": "Je ne me contente pas de dessiner des écrans ou d'écrire du code. Je pense au produit dans sa globalité — le parcours utilisateur, le modèle économique, le levier de croissance, l'architecture technique. C'est ce qui fait la différence entre un bon travail et un excellent travail.",
+        "products": "Produits créés",
+        "years": "Ans d'expérience",
+        "mindset": "Esprit fondateur"
+    },
+    "experiences": {
+        "title": "Expérience",
+        "subtitle1": "Là Où J'ai Créé & Lancé Des",
+        "subtitle2": "Produits",
+        "timeline": [
+            {
+                "company": "MYCOACH",
+                "role": "Co-fondateur & PDG",
+                "dates": "Janvier 2025 - Présent",
+                "description": "Fondation et création d'une plateforme de marketplace de coaching de zéro — direction de la stratégie produit, design UX, ingénierie full-stack et opérations commerciales.",
+                "key_contributions": [
+                    "Conception et lancement du produit complet en moins de 4 mois",
+                    "Création d'un algorithme de matching de coachs et d'un système de réservation en temps réel",
+                    "Intégration de 14 coachs certifiés et plus de 25 premiers utilisateurs avant le lancement",
+                    "Participation aux programmes d'accélération ALX Ventures et Accelab x MDJS"
+                ]
+            },
+            {
+                "company": "VOUCHIFY",
+                "role": "Product Designer & Développeur Web",
+                "dates": "Janvier 2026 - Présent",
+                "description": "Développement de la plateforme web pour un système numérique de gestion d'adhésions et de bons de réduction qui aide les entreprises à fidéliser leurs clients via des programmes de fidélité basés sur les portefeuilles numériques.",
+                "key_contributions": [
+                    "Création d'un système de création et de gestion de bons numériques",
+                    "Intégration de la génération de pass Apple & Google Wallet",
+                    "Développement d'un tableau de bord marchand avec des analyses",
+                    "Lancement d'une PWA mobile-first pour les utilisateurs finaux"
+                ]
+            },
+            {
+                "company": "LifeLine",
+                "role": "Développeur Front-End & Designer UI/UX",
+                "dates": "Juillet 2024 - Décembre 2025",
+                "description": "Direction du design produit et de l'ingénierie pour une plateforme HealthTech complète reliant patients, pharmacies et fournisseurs d'assurance à travers l'Afrique.",
+                "key_contributions": [
+                    "Conception et création du flux de réservation des patients, de la recherche au lancement",
+                    "Développement d'un tableau de bord de pharmacie avec gestion des stocks en temps réel",
+                    "Intégration d'un système de vérification des réclamations d'assurance",
+                    "Atteinte de 98% de satisfaction utilisateur dès la première version"
+                ]
+            }
+        ]
+    },
+    "work": {
+        "title": "Projets phares",
+        "subtitle1": "Études De Cas Dont Je Suis",
+        "subtitle2": "Fier",
+        "description": "Plongez au cœur de certains de mes projets les plus impactants, en découvrant le problème, la solution et les résultats.",
+        "viewCaseStudy": "Voir l'étude de cas",
+        "visitLiveSite": "Visiter le site",
+        "overview": "Aperçu",
+        "theChallenge": "Le défi",
+        "myRole": "Mon rôle",
+        "solution": "Solution",
+        "process": "Processus",
+        "outcome": "Résultat",
+        "technologies": "Technologies",
+        "caseStudies": {
+            "mycoach": {
+                "title": "MYCOACH",
+                "subtitle": "Plateforme de Marketplace de Coaching",
+                "metrics": {
+                    "users": {
+                        "label": "Utilisateurs",
+                        "value": "1000+"
+                    },
+                    "bookingRate": {
+                        "label": "Taux de réservation",
+                        "value": "89%"
+                    },
+                    "rating": {
+                        "label": "Note",
+                        "value": "4.8/5"
+                    }
+                },
+                "overview": [
+                    "My Coach est une marketplace de coaching conçue pour aider les individus à découvrir, à se connecter avec et à réserver des entraîneurs personnels qualifiés en fonction de leurs objectifs et préférences. La plateforme vise à éliminer les frictions souvent associées à la recherche de coachs de confiance tout en fournissant aux entraîneurs des outils pour gérer et développer leur activité.",
+                    "En tant que co-fondateur, Product Designer et développeur Full-Stack, j'étais responsable de la transformation de l'idée en un MVP fonctionnel, de la direction de la stratégie produit, de la conception de l'expérience utilisateur et du développement de l'architecture de la plateforme."
+                ],
+                "challenge": [
+                    "De nombreuses personnes ont du mal à trouver des coachs sportifs de confiance qui correspondent à leurs besoins spécifiques. Les solutions existantes manquent souvent de transparence, de personnalisation et d'expériences de réservation fluides. Les coachs rencontrent également des difficultés pour gérer les relations clients et mettre en valeur leur expertise en ligne.",
+                    "L'objectif était de créer une plateforme qui simplifierait la découverte de coachs, améliorerait la confiance et offrirait une expérience de réservation fluide pour les coachs et les clients."
+                ],
+                "roles": [
+                    "PDG",
+                    "Stratégie Produit",
+                    "Recherche UX",
+                    "Développement MVP",
+                    "Marketing de Croissance",
+                    "Ventes & Partenariats"
+                ],
+                "solution": "Pour relever les défis auxquels sont confrontés à la fois les coachs et les clients, j'ai conçu et développé une plateforme qui rationalise l'ensemble du parcours de coaching, de la découverte à l'engagement à long terme. L'expérience a été construite autour de la mise en relation personnalisée des coachs, permettant aux utilisateurs de trouver des professionnels alignés avec leurs objectifs, leurs préférences et leurs besoins en coaching. J'ai créé des profils de coach détaillés qui ont instauré la confiance grâce à des informations transparentes et des preuves sociales, tandis qu'un flux de réservation transparent simplifiait la planification et la gestion des sessions. Au-delà de l'expérience client, j'ai conçu des outils permettant aux coachs de gérer leurs services, de suivre les progrès des clients et de développer leur entreprise plus efficacement. Le résultat a été une plateforme évolutive et adaptée aux mobiles qui équilibrait l'expérience utilisateur, les objectifs commerciaux et l'efficacité opérationnelle.",
+                "processText": [
+                    "J'ai commencé par identifier les principaux problèmes rencontrés par les coachs et les clients. Sur la base de ces résultats, j'ai conçu des parcours utilisateurs axés sur la réduction des frictions lors de l'intégration, de la découverte de coachs et de la réservation.",
+                    "La plateforme s'articule autour de trois expériences clés :"
+                ],
+                "processBullets": [
+                    "Découverte et mise en relation de coachs",
+                    "Réservation et gestion des sessions",
+                    "Suivi des progrès et engagement des clients"
+                ],
+                "outcomeBullets": [
+                    "Intégration réussie de <strong>14</strong> coachs certifiés avant le lancement",
+                    "Création d'une liste d'attente de plus de <strong>25</strong> premiers utilisateurs",
+                    "Participation aux programmes d'accélération <strong>ALX Ventures</strong> et <strong>Accelab x MDJS</strong>",
+                    "Établissement des bases pour évoluer vers de nouvelles catégories de coaching",
+                    "Création d'un MVP complet prêt pour les tests bêta"
+                ]
+            },
+            "vouchify": {
+                "title": "VOUCHIFY",
+                "subtitle": "Plateforme Numérique d'Adhésions & Bons",
+                "metrics": {
+                    "businesses": {
+                        "label": "Entreprises",
+                        "value": "1000+"
+                    },
+                    "subscriptions": {
+                        "label": "Abonnements Vendus",
+                        "value": "100K+"
+                    },
+                    "countries": {
+                        "label": "Pays",
+                        "value": "20+"
+                    }
+                },
+                "overview": [
+                    "Vouchify est une plateforme numérique d'adhésions et de bons qui permet aux entreprises de créer, distribuer et gérer des pass numériques qui s'intègrent parfaitement aux portefeuilles mobiles.",
+                    "En tant que Développeur Full-Stack et Product Designer, j'ai travaillé à la fois sur l'expérience utilisateur et sur l'implémentation technique des fonctionnalités clés de la plateforme."
+                ],
+                "challenge": [
+                    "Les systèmes traditionnels d'adhésion et de bons reposent souvent sur des processus obsolètes, créant des frictions pour les entreprises et les clients. Le défi consistait à créer une plateforme évolutive et intuitive qui simplifierait la création, la gestion et la distribution de pass."
+                ],
+                "roles": [
+                    "Conception de Produits",
+                    "Développement Full-Stack",
+                    "Conception de l'Expérience Utilisateur",
+                    "Planification des Fonctionnalités",
+                    "Architecture Technique"
+                ],
+                "solution": "J'ai contribué à la création d'une plateforme numérique moderne d'adhésion et de bons de réduction qui a permis aux entreprises d'émettre, de gérer et de distribuer facilement des laissez-passer numériques tout en offrant une expérience transparente aux utilisateurs finaux. Le produit a été conçu pour éliminer la complexité traditionnellement associée aux programmes d'adhésion en proposant des flux de travail intuitifs, une intégration simplifiée et des outils de gestion centralisés. J'ai travaillé sur la conception et le développement pour m'assurer que les entreprises pouvaient gérer efficacement leurs offres numériques tandis que les clients pouvaient facilement accéder et utiliser les laissez-passer via les intégrations de portefeuille mobile. Le résultat a été une plateforme évolutive combinant simplicité, flexibilité et expérience utilisateur solide, rendant les adhésions numériques plus accessibles aux organisations de toutes tailles.",
+                "processText": [
+                    "J'ai travaillé en étroite collaboration avec l'équipe fondatrice pour comprendre les exigences commerciales et les attentes des utilisateurs.",
+                    "L'accent a été mis sur :"
+                ],
+                "processBullets": [
+                    "La rationalisation des flux d'intégration",
+                    "La simplification de la gestion des pass",
+                    "La création de tableaux de bord intuitifs",
+                    "La garantie de la compatibilité avec les portefeuilles mobiles",
+                    "La construction d'expériences frontend évolutives"
+                ],
+                "processFooter": "Chaque fonctionnalité a été conçue pour réduire la complexité tout en conservant une flexibilité pour différents cas d'utilisation professionnels.",
+                "outcomeBullets": [
+                    "Livraison d'expériences produit de bout en bout, de la conception à l'implémentation",
+                    "Amélioration de la convivialité grâce à des flux de travail simplifiés",
+                    "Construction d'une architecture frontend évolutive pour la croissance future",
+                    "Aide à la création d'une expérience d'adhésion numérique transparente pour les entreprises et les clients"
+                ]
+            },
+            "lifeline": {
+                "title": "LifeLine",
+                "subtitle": "Plateforme Health-Tech",
+                "metrics": {
+                    "providers": {
+                        "label": "Fournisseurs de Soins",
+                        "value": "200+"
+                    },
+                    "transactions": {
+                        "label": "Transactions Traitées",
+                        "value": "14k+"
+                    },
+                    "countries": {
+                        "label": "Pays",
+                        "value": "5+"
+                    }
+                },
+                "overview": [
+                    "LifeLine est une plateforme de santé conçue pour améliorer l'accès aux services médicaux via des solutions numériques qui connectent les patients, les prestataires de soins de santé, les pharmacies et les assureurs. La plateforme comprend la prise de rendez-vous, les flux de travail d'assurance, les outils de gestion de pharmacie et les expériences d'engagement des patients.",
+                    "En tant que Product Designer et Développeur Frontend, j'ai contribué à la conception et à la mise en œuvre de plusieurs produits au sein de l'écosystème LifeLine."
+                ],
+                "challenge": [
+                    "Les flux de travail dans le domaine de la santé sont souvent complexes, fragmentés et difficiles à naviguer pour les patients. Les prestataires sont également confrontés à des défis opérationnels causés par des systèmes déconnectés et des processus inefficaces.",
+                    "L'objectif était de simplifier les interactions de santé tout en maintenant la conformité, la confiance et l'accessibilité pour toutes les parties prenantes."
+                ],
+                "roles": [
+                    "Conception de Produits",
+                    "Conception UX/UI",
+                    "Développement Frontend",
+                    "Optimisation des Flux de Travail",
+                    "Cartographie du Parcours Utilisateur"
+                ],
+                "solution": "La solution visait à créer une expérience de santé numérique unifiée qui a simplifié les interactions entre les patients, les prestataires de soins, les pharmacies et les partenaires d'assurance. J'ai conçu et développé des interfaces intuitives qui ont transformé des flux de travail complexes en matière de soins de santé en expériences claires et conviviales. Cela comprenait les parcours de réservation de rendez-vous pour les patients, les processus d'intégration de l'assurance, les outils de gestion de la pharmacie et les tableaux de bord des prestataires. En établissant un système de conception cohérent et des composants frontend réutilisables, j'ai assuré une expérience transparente à travers l'ensemble de l'écosystème tout en améliorant l'efficacité pour les utilisateurs finaux et les professionnels de la santé. Le produit final a réduit les frictions tout au long du parcours de soins et a fourni une base évolutive pour les services et intégrations futurs.",
+                "processText": [
+                    "J'ai collaboré étroitement avec les parties prenantes pour comprendre les besoins des patients, des cliniques, des pharmacies et des partenaires d'assurance.",
+                    "Le processus de conception s'est concentré sur :"
+                ],
+                "processBullets": [
+                    "La simplification des parcours de soins de santé",
+                    "La réduction de la charge cognitive",
+                    "L'amélioration de l'accessibilité à l'information",
+                    "La création de systèmes de conception évolutifs",
+                    "La construction d'interfaces réactives"
+                ],
+                "processFooter": "J'ai traduit des processus de santé complexes en expériences numériques intuitives tout en assurant la cohérence sur l'ensemble de la plateforme.",
+                "outcomeBullets": [
+                    "Livraison d'interfaces réactives et évolutives pour plusieurs produits de santé",
+                    "Amélioration de l'efficacité des flux de travail grâce à des expériences de tableau de bord intuitives",
+                    "Aide à la création d'un langage de conception cohérent sur toute la plateforme",
+                    "Accélération du développement grâce à des composants réutilisables et à une architecture frontend structurée"
+                ]
+            }
+        }
+    },
+    "skills": {
+        "title": "Expertise technique",
+        "subtitle1": "Compétences Full-stack Du",
+        "subtitle2": "Design",
+        "subtitle3": "Au",
+        "subtitle4": "Déploiement"
+    },
+    "startups": {
+        "title": "Créateur de startups",
+        "subtitle1": "Je construis des",
+        "subtitle2": "Startups",
+        "subtitle3": "pas juste des Fonctionnalités",
+        "ctaTitle": "Besoin d'un collaborateur au niveau d'un co-fondateur ?",
+        "ctaDesc": "Je m'intègre aux équipes fondatrices pour mener le produit de 0 à 1 — design, ingénierie et stratégie regroupés en une seule personne.",
+        "ctaButton": "Me contacter",
+        "cards": [
+            {
+                "title": "Stratégie Produit",
+                "description": "De l'étude de marché à la vision produit — je définis la feuille de route qui équilibre les besoins des utilisateurs avec les objectifs commerciaux.",
+                "tags": [
+                    "Dimensionnement du Marché",
+                    "Définition OKR",
+                    "Planification de la Feuille de Route",
+                    "Analyse Concurrentielle"
+                ]
+            },
+            {
+                "title": "Développement MVP",
+                "description": "Je livre des produits fonctionnels rapidement. Le design + l'ingénierie en une seule personne signifie moins de transferts, des itérations plus rapides.",
+                "tags": [
+                    "Cycles MVP de 4 à 8 Semaines",
+                    "Exécution Full-Stack",
+                    "Design → Code",
+                    "Validation Lean"
+                ]
+            },
+            {
+                "title": "Développement Assisté par l'IA",
+                "description": "J'utilise les outils d'IA nativement — de la génération de code à l'automatisation du design — pour construire à la vitesse des startups.",
+                "tags": [
+                    "Cursor IDE",
+                    "API Claude",
+                    "Prototypage IA",
+                    "Ingénierie de Prompts"
+                ]
+            },
+            {
+                "title": "Design d'Expérience Utilisateur",
+                "description": "Chaque interaction est intentionnelle. Je conçois pour la clarté, le plaisir et la conversion — pas seulement pour l'esthétique.",
+                "tags": [
+                    "Recherche UX",
+                    "Wireframing",
+                    "Prototypes Hi-Fi",
+                    "Design Systems"
+                ]
+            },
+            {
+                "title": "Conception de Marketplace",
+                "description": "Je comprends la dynamique des marketplaces bilatérales — je conçois simultanément pour l'offre et la demande.",
+                "tags": [
+                    "UX Offre & Demande",
+                    "Systèmes de Confiance",
+                    "Recherche & Découverte",
+                    "Parcours d'Intégration"
+                ]
+            },
+            {
+                "title": "Opérations de Startup",
+                "description": "En tant que fondateur, j'ai navigué à travers la levée de fonds, la création d'équipe, la structure juridique et l'acquisition des premiers clients.",
+                "tags": [
+                    "Levée de Fonds",
+                    "Création d'Équipe",
+                    "Structure Juridique",
+                    "Métriques & KPIs"
+                ]
+            }
+        ]
+    },
+    "education": {
+        "title": "Formation & Certifications",
+        "subtitle": "Titres et Apprentissage continu",
+        "academic": "Formation Académique",
+        "certifications": "Certifications",
+        "showCredential": "Voir le certificat",
+        "academicList": [
+            {
+                "title": "Master Européen en Applications Intelligentes & Big Data",
+                "institution": "MIAGE Casablanca | FEDE",
+                "date": "2024 - 2026",
+                "description": "Étude avancée des systèmes d'IA, du machine learning, des architectures big data et de la conception d'applications intelligentes"
+            },
+            {
+                "title": "Licence en Ingénierie de l'Automatisation",
+                "institution": "FST Settat",
+                "date": "2016 - 2017",
+                "description": "Fondations en ingénierie des systèmes, systèmes de contrôle et automatisation — développement des compétences analytiques et de résolution de problèmes techniques"
+            }
+        ],
+        "certificationsList": [
+            {
+                "title": "Software Engineering",
+                "institution": "ALX Africa",
+                "date": "Novembre 2024",
+                "description": "Programme intensif de 12 mois couvrant le développement full-stack, les algorithmes, la conception de systèmes et les meilleures pratiques d'ingénierie"
+            },
+            {
+                "title": "McKinsey Forward Program",
+                "institution": "McKinsey & Company",
+                "date": "Juillet 2024",
+                "description": "Sélectionné pour le programme de leadership et de résolution de problèmes de McKinsey pour les individus à haut potentiel des marchés émergents"
+            },
+            {
+                "title": "Founder Academy",
+                "institution": "ALX Ventures",
+                "date": "Juillet 2024",
+                "description": "Fondamentaux des startups — adéquation produit-marché, levée de fonds, stratégie de mise sur le marché et dynamique de l'équipe fondatrice"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Témoignages",
+        "subtitle1": "Ce que disent",
+        "subtitle2": "les fondateurs",
+        "subtitle3": "les clients",
+        "subtitle4": "",
+        "list": [
+            {
+                "name": "King Chukwumere",
+                "role": "PDG, LifeLine Africa",
+                "content": "Travailler avec Mohsine a été la meilleure décision que nous ayons prise. Il a livré une plateforme de santé complexe dans les délais et en dépassant nos attentes. Son attention aux détails UX et à l'architecture évolutive est exceptionnelle."
+            },
+            {
+                "name": "Anas Oudadsse",
+                "role": "CTO, MYCOACH",
+                "content": "Mohsine est exceptionnel. Il n'a pas seulement construit notre produit ; il a contribué à façonner toute notre stratégie commerciale. Ses compétences techniques n'ont d'égal que sa compréhension de l'adéquation produit-marché. Un véritable atout pour toute équipe fondatrice."
+            }
+        ]
+    },
+    "contact": {
+        "title1": "Construisons",
+        "title2": "Ensemble",
+        "subtitle": "Vous avez un projet en tête ou vous voulez simplement dire bonjour ? Je suis toujours ouvert pour discuter de travaux en conception de produits ou d'opportunités de partenariat.",
+        "getInTouch": "Contactez-moi",
+        "getInTouchDesc": "Que vous ayez une question ou que vous souhaitiez simplement échanger, ma boîte de réception est toujours ouverte. Je ferai de mon mieux pour vous répondre !",
+        "bookACall": "Réserver un appel",
+        "bookACallDesc": "Planifiez un appel de 30 minutes avec moi",
+        "connectWithMe": "Connectez-vous avec moi",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "placeholder": "Parlez-moi de votre projet...",
+        "sendMessage": "Envoyer le message",
+        "sending": "Envoi...",
+        "success": "Message envoyé ! Je vous répondrai bientôt.",
+        "error": "Une erreur s'est produite. Veuillez essayer de m'envoyer un email directement."
+    },
+    "footer": {
+        "copyright": "© {{year}} Mohsine Hourmat Allah. Tous droits réservés."
+    }
+}

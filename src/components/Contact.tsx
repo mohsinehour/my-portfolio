@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Send, Mail, ExternalLink, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
-// Get your free access key at https://web3forms.com — paste it below
-const WEB3FORMS_ACCESS_KEY = 'f56a42a2-b730-4bfc-b02f-28b3197fc1b0';
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState<SubmitStatus>('idle');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -57,35 +58,35 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Let's Build <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Together</span>
+            {t('contact.title1')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">{t('contact.title2')}</span>
           </h2>
           <p className="text-secondary max-w-2xl mx-auto">
-            Have a project in mind, or just want to say hi? I'm always open to discussing product design work or partnership opportunities.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-          <div className="p-10 md:p-12 bg-gradient-to-br from-brand to-primary text-white relative overflow-hidden">
+          <div className="p-6 md:p-12 bg-gradient-to-br from-brand to-primary text-white relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6">Get in touch</h3>
-              <p className="text-white mb-10 leading-relaxed">
-                Whether you have a question or just want to connect, my inbox is always open. I'll try my best to get back to you!
+              <h3 className="text-3xl font-bold mb-6">{t('contact.getInTouch')}</h3>
+              <p className="text-white mb-10 md:mb-16 leading-relaxed">
+                {t('contact.getInTouchDesc')}
               </p>
 
-              <div className="space-y-6 mb-12">
+              <div className="space-y-6 mb-10 md:mb-14">
                 <div className="flex items-center gap-4 group">
                   <div className="w-14 h-14 shrink-0 bg-white/10 rounded-full flex items-center justify-center">
                     <Calendar size={24} className="text-white" />
                   </div>
                   <div>
-                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:scale-105 hover:underline transition-transform duration-300 ease-in-out flex items-center gap-2">Book a Call <ExternalLink size={18} /></a>
-                    <p className="font-md text-md text-white">Schedule a 30 min call with me</p>
+                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:scale-105 hover:underline transition-transform duration-300 ease-in-out flex items-center gap-2">{t('contact.bookACall')} <ExternalLink size={18} /></a>
+                    <p className="font-md text-md text-white">{t('contact.bookACallDesc')}</p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <p className="text-sm text-white mb-4">Connect with me</p>
+                <p className="text-sm text-white mb-4">{t('contact.connectWithMe')}</p>
                 <div className="flex gap-4">
                   <a href="https://www.linkedin.com/in/mohsine-hourmat-allah/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors transform hover:-translate-y-1 duration-200">
                     <FaLinkedin size={18} />
@@ -107,13 +108,13 @@ export default function Contact() {
             <div className="absolute -bottom-24 -right-24 w-64 h-64 border-[40px] border-white/5 rounded-full"></div>
           </div>
 
-          <div className="p-10 md:p-12">
+          <div className="p-6 md:p-12">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Honeypot field — invisible to humans, bots fill it in and get silently rejected */}
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">{t('contact.name')}</label>
                 <input
                   type="text"
                   id="name"
@@ -124,7 +125,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">{t('contact.email')}</label>
                 <input
                   type="email"
                   id="email"
@@ -135,14 +136,14 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-primary mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-primary mb-2">{t('contact.message')}</label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   rows={4}
                   className="w-full px-4 py-3 rounded-xl bg-gray-50 focus:outline-none focus:ring-1 focus:ring-brand focus:border-transparent transition-all resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder={t('contact.placeholder')}
                 ></textarea>
               </div>
 
@@ -151,18 +152,18 @@ export default function Contact() {
                 disabled={status === 'loading'}
                 className="w-full py-4 bg-gradient-brand text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-blue-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
               >
-                {status === 'loading' ? 'Sending...' : 'Send Message'}
+                {status === 'loading' ? t('contact.sending') : t('contact.sendMessage')}
                 {status === 'idle' && <Send size={18} />}
               </button>
 
               {status === 'success' && (
                 <div className="flex items-center gap-2 text-green-600 text-sm font-medium">
-                  <CheckCircle size={18} /> Message sent! I'll get back to you soon.
+                  <CheckCircle size={18} /> {t('contact.success')}
                 </div>
               )}
               {status === 'error' && (
                 <div className="flex items-center gap-2 text-red-600 text-sm font-medium">
-                  <AlertCircle size={18} /> Something went wrong. Please try emailing me directly.
+                  <AlertCircle size={18} /> {t('contact.error')}
                 </div>
               )}
             </form>

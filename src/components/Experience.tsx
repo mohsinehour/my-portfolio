@@ -1,54 +1,14 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import mycoachLogo from '../assets/experience/mycoach-logo.png';
 import vouchifyLogo from '../assets/experience/vouchify-logo.png';
 import lifelineLogo from '../assets/experience/lifeline-logo.png';
 
-const experiences = [
-  {
-    company: 'MYCOACH',
-    logo: mycoachLogo,
-    role: 'Co-Founder & CEO',
-    date: 'Jan 2025 - Present',
-    description: 'Founded and built a coaching marketplace platform from zero — leading product strategy, UX design, full-stack engineering, and business operations.',
-    Bulletpoints: [
-      'Designed and shipped the full product in under 4 months',
-      'Built coach-matching algorithm and real-time booking system',
-      'Grew to 2,400+ users with minimal marketing spend',
-      'Raised initial funding and managed a cross-functional team'
-    ],
-    skills: ['Figma', 'ReactJS', 'Laravel', 'MySQL']
-  },
-  {
-    company: 'VOUCHIFY',
-    logo: vouchifyLogo,
-    role: 'Product Designer & Web Developer',
-    date: 'January 2026 - Present',
-    description: 'Developed the web platform for a digital membership and voucher management system that helps businesses retain customers through wallet-based loyalty programs.',
-    Bulletpoints: [
-      'Built digital voucher creation and management system',
-      'Integrated Apple & Google Wallet pass generation',
-      'Developed merchant dashboard with analytics',
-      'Shipped mobile-first PWA for end users'
-    ],
-    skills: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS']
-  },
-  {
-    company: 'LifeLine',
-    logo: lifelineLogo,
-    role: 'Front-End Developer & UI/UX Designer',
-    date: 'July 2024 - December 2025',
-    description: 'Led product design and engineering for a comprehensive HealthTech platform connecting patients, pharmacies, and insurance providers across Africa.',
-    Bulletpoints: [
-      'Designed and built the patient booking flow from research to launch',
-      'Engineered pharmacy dashboard with real-time inventory management',
-      'Integrated insurance claim verification system',
-      'Achieved 98% user satisfaction on first release'
-    ],
-    skills: ['Figma', 'React', 'Tailwind CSS']
-  }
-];
+const logos = [mycoachLogo, vouchifyLogo, lifelineLogo];
 
 export default function Experience() {
+  const { t } = useTranslation();
+  const experiences = (t('experiences.timeline', { returnObjects: true }) as any[]).map((exp, idx) => ({ ...exp, logo: logos[idx] }));
   return (
     <section id="experience" className="py-20 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,11 +21,11 @@ export default function Experience() {
         >
           <div className='flex justify-start mb-5'>
             <h2 className="text-md tracking-widest font-medium uppercase text-brand">
-              Experience
+              {t('experiences.title')}
             </h2>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Where I've Built & Shipped <span className="text-brand">Products</span>
+            {t('experiences.subtitle1')} <span className="text-brand">{t('experiences.subtitle2')}</span>
           </h2>
         </motion.div>
 
@@ -91,27 +51,20 @@ export default function Experience() {
                     <h3 className="text-xl font-bold text-primary">{exp.company}</h3>
                     <p className="text-brand font-medium text-sm">{exp.role}</p>
                   </div>
-                  <span className="text-gray-400 text-sm mt-2 sm:mt-0 font-small">{exp.date}</span>
+                  <span className="text-gray-400 text-sm mt-2 sm:mt-0 font-small">{exp.dates}</span>
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   {exp.description}
                 </p>
                 <div>
                   <ul className='text-brand text-sm leading-relaxed mb-4'>
-                    {exp.Bulletpoints.map(bullet => (
+                    {exp.key_contributions.map((bullet: string) => (
                       <li key={bullet} className="flex items-start gap-2 text-primary text-sm leading-tight mb-4">
                         <span className="mt-2 w-1 h-1 rounded-full bg-brand flex-shrink-0" />
                         {bullet}
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map(skill => (
-                    <span key={skill} className="px-3 py-1 text-gray-500 text-xs rounded-full shadow-[0_0px_5px_rgba(17,17,17,0.15)]">
-                      {skill}
-                    </span>
-                  ))}
                 </div>
               </div>
             </motion.div>

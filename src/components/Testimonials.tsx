@@ -1,26 +1,16 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import kingChukwumere from '../assets/testimonials/king-lifeline.jpg';
 import anasOudadsse from '../assets/testimonials/anas-mycoach.jpeg';
 
-const testimonials = [
-  {
-    name: 'King Chukwumere',
-    role: 'CEO, LifeLine Africa',
-    content: "Working with Mohsine was the best decision we made. He delivered a complex healthcare platform on time and exceeding our expectations. His attention to UX details and scalable architecture is outstanding.",
-    image: kingChukwumere,
-  },
-  {
-    name: 'Anas Oudadsse',
-    role: 'CTO, MYCOACH',
-    content: "Mohsine is exceptional. He didn't just build our product; he helped shape our entire business strategy. His technical skills are matched only by his understanding of product-market fit. A true asset to any founding team.",
-    image: anasOudadsse,
-  },
-];
+const testimonialImages = [kingChukwumere, anasOudadsse];
 
 const AUTOPLAY_INTERVAL = 4000;
 
 export default function Testimonials() {
+  const { t } = useTranslation();
+  const testimonials = (t('testimonials.list', { returnObjects: true }) as any[]).map((tItem, i) => ({ ...tItem, image: testimonialImages[i] }));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const isAutoScrolling = useRef(false);
@@ -77,11 +67,11 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-md mb-2 tracking-widest font-medium uppercase bg-clip-text text-transparent"
-            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 30%, #1D2939 100%)' }}>
-            Testimonials
+            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 16%, #1D2939 100%)' }}>
+            {t('testimonials.title')}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            What <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Founders</span> & <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Clients</span> Say
+            {t('testimonials.subtitle1')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">{t('testimonials.subtitle2')}</span> & <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">{t('testimonials.subtitle3')}</span> {t('testimonials.subtitle4')}
           </h2>
         </motion.div>
 

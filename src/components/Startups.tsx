@@ -1,47 +1,18 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Target, Zap, Brain, Layers, TrendingUp, Store, ArrowUpRight } from 'lucide-react';
 
-const cards = [
-  {
-    icon: <Target size={24} />,
-    title: 'Product Strategy',
-    description: 'From market research to product vision — I define the roadmap that balances user needs with business goals.',
-    tags: ['Market Sizing', 'OKR Settings', 'Roadmap Planning', 'Conmpetetive Analysis']
-  },
-  {
-    icon: <Zap size={24} />,
-    title: 'MVP Development',
-    description: 'I ship working products fast. Design + engineering in one person means fewer handoffs, faster iterations.',
-    tags: ['4 - 8 Week MVP Cycles', 'Full-Stack Execution', 'Design → Code', 'Lean Validation']
-  },
-  {
-    icon: <Brain size={24} />,
-    title: 'AI-Powered Development',
-    description: 'I use AI tools natively — from code generation to design automation — to build at startup speed.',
-    tags: ['Cursor IDE', 'Claude API', 'AI Prototyping', 'Prompt Engineering']
-  },
-  {
-    icon: <Layers size={24} />,
-    title: 'User Experience Design',
-    description: 'Every interaction is intentional. I design for clarity, delight, and conversion — not just aesthetics.',
-    tags: ['UX Research', 'Wireframing', 'Hi-Fi Prototypes', 'Design Systems']
-  },
-  {
-    icon: <Store size={24} />,
-    title: 'Marketplace Design',
-    description: 'I understand two-sided marketplace dynamics — designing for both supply and demand simultaneously.',
-    tags: ['Supply & Demand UX', 'Trust Systems', 'Search & Discovery ', 'Onboarding Flows']
-  },
-  {
-    icon: <TrendingUp size={24} />,
-    title: 'Startup Operations',
-    description: 'As a founder, I\'ve navigated fundraising, team building, legal structure, and early customer acquisition.',
-    tags: ['Fundraising', 'Team Building', 'Legal Structure', 'Metrics & KPIs']
-  },
+const icons = [
+  <Target size={24} />,
+  <Zap size={24} />,
+  <Brain size={24} />,
+  <Layers size={24} />,
+  <Store size={24} />,
+  <TrendingUp size={24} />
 ];
 
-function StartupCard({ startup, index }: { startup: typeof cards[number]; index: number }) {
+function StartupCard({ startup, index }: { startup: any; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -73,6 +44,9 @@ function StartupCard({ startup, index }: { startup: typeof cards[number]; index:
 }
 
 export default function Startups() {
+  const { t } = useTranslation();
+  const cardsData = t('startups.cards', { returnObjects: true }) as any[];
+  const cards = cardsData.map((c, i) => ({ ...c, icon: icons[i] }));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -110,10 +84,12 @@ export default function Startups() {
         >
           <h2 className="text-md tracking-widest font-medium uppercase bg-clip-text text-transparent "
             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #364a65ff 100%)' }}>
-            Startup Builder
+            {t('startups.title')}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            I Build <span className="text-brand">Startups</span>, not just Features
+            {t('startups.subtitle1')} {' '}
+            <span className='text-brand'>{t('startups.subtitle2')}</span>,{' '}
+            {t('startups.subtitle3')}
           </h2>
         </motion.div>
 
@@ -151,12 +127,12 @@ export default function Startups() {
 
         <div className="mt-12 flex flex-col md:flex-row md:justify-between md:items-center gap-6 w-full bg-gradient-brand rounded-2xl px-6 py-6">
           <div className="flex flex-col items-start gap-2 md:gap-0">
-            <h2 className='text-2xl font-bold text-white'>Need a co-founder-level collaborator?</h2>
-            <p className='text-white text-md leading-relaxed'>I embed with founding teams to drive product from 0→1 — design, engineering, and strategy in one person.</p>
+            <h2 className='text-2xl font-bold text-white'>{t('startups.ctaTitle')}</h2>
+            <p className='text-white text-md leading-relaxed'>{t('startups.ctaDesc')}</p>
           </div>
           <div className="flex items-center space-x-4">
             <a href="#contact" className="inline-flex w-full items-center justify-center gap-2 bg-white text-primary px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
-              Get In Touch <ArrowUpRight size={16} />
+              {t('startups.ctaButton')} <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

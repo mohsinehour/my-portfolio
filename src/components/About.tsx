@@ -1,8 +1,10 @@
 import { Award, Package, Quote, Sprout } from 'lucide-react';
 import aboutImage from '../assets/about-image1.jpg';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+    const { t } = useTranslation();
     return (
         <section id="about" className="pb-20 pt-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +17,7 @@ export default function About() {
                     <div className='flex justify-start mb-5'>
                         <h2 className="text-md tracking-widest  font-medium uppercase bg-clip-text text-transparent "
                             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
-                            About Me
+                            {t('about.title')}
                         </h2>
                     </div>
                 </motion.div>
@@ -28,16 +30,15 @@ export default function About() {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
-                            <h1 className="text-4xl font-semibold text-primary mb-6">I build products like a <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Founder,</span><br /> design like an <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Artist</span></h1>
+                            <h1 className="text-4xl font-semibold text-primary mb-6">{t('about.subtitle1')}<span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary"> {t('about.subtitle2')}</span> {t('about.subtitle3')}<span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary"> {t('about.subtitle4')}</span></h1>
                             <p className="text-lg text-secondary mb-4 max-w-lg leading-relaxed">
-                                I'm a Product Designer, Full-Stack Developer, and Startup Founder with a rare combination of technical depth and design sensibility. My work sits at the intersection of engineering, creativity, and entrepreneurship.
-
+                                {t('about.description1')}
                             </p>
                             <p className="text-lg text-secondary mb-4 max-w-lg leading-relaxed">
-                                After studying Automation Engineering and earning a European Master in Intelligent Applications & Big Data, I shifted my focus to building digital products that solve real human problems — from HealthTech platforms to AI-powered coaching marketplaces.
+                                {t('about.description2')}
                             </p>
                             <p className="text-lg text-secondary mb-4 max-w-lg leading-relaxed">
-                                As Co-Founder and CEO of My Coach, I've worn every hat imaginable — product strategy, UX research, engineering, and growth. That founder mindset informs everything I design and build.
+                                {t('about.description3')}
                             </p>
                         </motion.div>
                     </div>
@@ -62,7 +63,7 @@ export default function About() {
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
                                     <Quote className='w-8 h-8 text-white mb-2 rotate-180' />
                                     <p className="text-white text-sm leading-relaxed">
-                                        I don't just design screens or write code. I think about the full product — the user's journey, the business model, the growth lever, the technical architecture. That's what makes the difference between good work and great work.
+                                        {t('about.quote')}
                                     </p>
                                 </div>
                             </div>
@@ -76,16 +77,15 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0 }}
-                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gradient-to-br from-brand to-primary rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
-                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
-                            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase text-white'>
                             4+
                         </h2>
-                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
-                            Products Built
+                        <h3 className="text-sm md:text-md text-center text-white mb-4 leading-relaxed">
+                            {t('about.products')}
                         </h3>
-                        <Package className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
+                        <Package className='w-8 h-8 text-white group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                     <motion.div
@@ -93,16 +93,15 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gradient-to-br from-brand to-primary rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
-                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
-                            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase text-white'>
                             3+
                         </h2>
-                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
-                            Years of Experience
+                        <h3 className="text-sm md:text-md text-center text-white mb-4 leading-relaxed">
+                            {t('about.years')}
                         </h3>
-                        <Award className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
+                        <Award className='w-8 h-8 text-white group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                     <motion.div
@@ -110,16 +109,15 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="group flex flex-col items-center justify-center bg-gray-100 rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
+                        className="group flex flex-col items-center justify-center bg-gradient-to-br from-brand to-primary rounded-3xl shadow-[0_0px_5px_rgba(17,17,17,0.15)] p-1 md:p-5 hover:scale-103 hover:cursor-pointer transition-all duration-300"
                     >
-                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase bg-clip-text text-transparent'
-                            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 100%)' }}>
+                        <h2 className='text-xl md:text-2xl tracking-widest font-medium uppercase text-white'>
                             100%
                         </h2>
-                        <h3 className="text-sm md:text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-4 leading-relaxed">
-                            Founder Mindset
+                        <h3 className="text-sm md:text-md text-center text-white mb-4 leading-relaxed">
+                            {t('about.mindset')}
                         </h3>
-                        <Sprout className='w-8 h-8 text-brand group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
+                        <Sprout className='w-8 h-8 text-white group-hover:-rotate-6 group-hover:cursor-pointer transition-all duration-300' />
                     </motion.div>
 
                 </div>

@@ -1,0 +1,413 @@
+{
+    "nav": {
+        "about": "About",
+        "experience": "Experience",
+        "work": "Work",
+        "skills": "Skills",
+        "education": "Education",
+        "contact": "Contact",
+        "letsTalk": "Let's Talk"
+    },
+    "hero": {
+        "tag": "Hello!",
+        "title": "I'm Mohsine Hourmat Allah,",
+        "subtitle1": "Founder, Product Designer ",
+        "subtitle2": "Full-Stack Developer",
+        "description": "I design and build digital products that matter — from marketplace platforms to SaaS applications. I bring founder-level thinking to every project I touch.",
+        "viewWork": "View My Work",
+        "bookACall": "Book a Call",
+        "strip": [
+            "3+ Years Experience",
+            "Startup Founder",
+            "Product Designer",
+            "Full-Stack Developer"
+        ]
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle1": "I build products like a",
+        "subtitle2": "Founder,",
+        "subtitle3": "design like an",
+        "subtitle4": "Artist",
+        "description1": "I'm a Product Designer, Full-Stack Developer, and Startup Founder with a rare combination of technical depth and design sensibility. My work sits at the intersection of engineering, creativity, and entrepreneurship.",
+        "description2": "After studying Automation Engineering and earning a European Master in Intelligent Applications & Big Data, I shifted my focus to building digital products that solve real human problems — from HealthTech platforms to AI-powered coaching marketplaces.",
+        "description3": "As Co-Founder and CEO of My Coach, I've worn every hat imaginable — product strategy, UX research, engineering, and growth. That founder mindset informs everything I design and build.",
+        "quote": "I don't just design screens or write code. I think about the full product — the user's journey, the business model, the growth lever, the technical architecture. That's what makes the difference between good work and great work.",
+        "products": "Products Built",
+        "years": "Years of Experience",
+        "mindset": "Founder Mindset"
+    },
+    "experiences": {
+        "title": "Experience",
+        "subtitle1": "Where I've Built & Shipped",
+        "subtitle2": "Products",
+        "timeline": [
+            {
+                "company": "MYCOACH",
+                "role": "Co-Founder & CEO",
+                "dates": "January 2025 - Present",
+                "description": "Founded and built a coaching marketplace platform from zero — leading product strategy, UX design, full-stack engineering, and business operations.",
+                "key_contributions": [
+                    "Designed and shipped the full product in under 4 months",
+                    "Built coach-matching algorithm and real-time booking system",
+                    "Onboarded 14 certified coaches and 25+ early users before launch",
+                    "Participated in ALX Ventures and Accelab x MDJS accelerator programs"
+                ]
+            },
+            {
+                "company": "VOUCHIFY",
+                "role": "Product Designer & Web Developer",
+                "dates": "January 2026 - Present",
+                "description": "Developed the web platform for a digital membership and voucher management system that helps businesses retain customers through wallet-based loyalty programs.",
+                "key_contributions": [
+                    "Built digital voucher creation and management system",
+                    "Integrated Apple & Google Wallet pass generation",
+                    "Developed merchant dashboard with analytics",
+                    "Shipped mobile-first PWA for end users"
+                ]
+            },
+            {
+                "company": "LifeLine",
+                "role": "Front-End Developer & UI/UX Designer",
+                "dates": "July 2024 - December 2025",
+                "description": "Led product design and engineering for a comprehensive HealthTech platform connecting patients, pharmacies, and insurance providers across Africa.",
+                "key_contributions": [
+                    "Designed and built the patient booking flow from research to launch",
+                    "Engineered pharmacy dashboard with real-time inventory management",
+                    "Integrated insurance claim verification system",
+                    "Achieved 98% user satisfaction on first release"
+                ]
+            }
+        ]
+    },
+    "work": {
+        "title": "Featured Work",
+        "subtitle1": "Case Studies I'm",
+        "subtitle2": "Proud Of",
+        "description": "Deep dives into some of my most impactful projects, showcasing the problem, solution, and outcomes.",
+        "viewCaseStudy": "View Case Study",
+        "visitLiveSite": "Visit Live Site",
+        "overview": "Overview",
+        "theChallenge": "The Challenge",
+        "myRole": "My Role",
+        "solution": "Solution",
+        "process": "Process",
+        "outcome": "Outcome",
+        "technologies": "Technologies",
+        "caseStudies": {
+            "mycoach": {
+                "title": "MYCOACH",
+                "subtitle": "Coaching Marketplace Platform",
+                "metrics": {
+                    "users": {
+                        "label": "Users",
+                        "value": "1000+"
+                    },
+                    "bookingRate": {
+                        "label": "Booking Rate",
+                        "value": "89%"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "value": "4.8/5"
+                    }
+                },
+                "overview": [
+                    "My Coach is a coaching marketplace designed to help individuals discover, connect with, and book qualified personal trainers based on their personal goals and preferences. The platform aims to remove the friction often associated with finding trusted coaches while providing trainers with tools to manage and grow their businesses.",
+                    "As Co-Founder, Product Designer, and Full-Stack Developer, I was responsible for transforming the idea into a functional MVP, leading product strategy, designing the user experience, and developing the platform's architecture."
+                ],
+                "challenge": [
+                    "Many people struggle to find trustworthy fitness coaches who match their specific needs. Existing solutions often lack transparency, personalization, and streamlined booking experiences. Coaches also face challenges managing client relationships and showcasing their expertise online.",
+                    "The goal was to create a platform that would simplify coach discovery, improve trust, and provide a seamless booking experience for both coaches and clients."
+                ],
+                "roles": [
+                    "CEO",
+                    "Product Strategy",
+                    "UX Research",
+                    "MVP Development",
+                    "Growth Marketing",
+                    "Sales & Partnerships"
+                ],
+                "solution": "To address the challenges faced by both coaches and clients, I designed and developed a platform that streamlined the entire coaching journey, from discovery to long-term engagement. The experience was built around personalized coach matching, allowing users to find professionals aligned with their goals, preferences, and coaching needs. I created detailed coach profiles that established trust through transparent information and social proof, while a seamless booking flow simplified scheduling and session management. Beyond the client experience, I designed tools that empowered coaches to manage their services, monitor client progress, and grow their businesses more effectively. The result was a scalable, mobile-responsive platform that balanced user experience, business objectives, and operational efficiency.",
+                "processText": [
+                    "I started by identifying the key pain points experienced by both coaches and clients. Based on these findings, I designed user journeys focused on reducing friction during onboarding, coach discovery, and booking.",
+                    "The platform was structured around three core experiences:"
+                ],
+                "processBullets": [
+                    "Coach discovery and matching",
+                    "Session booking and management",
+                    "Progress tracking and client engagement"
+                ],
+                "outcomeBullets": [
+                    "Successfully onboarded <strong>14</strong> certified coaches before launch",
+                    "Built a waiting list of <strong>25+</strong> early users",
+                    "Participated in <strong>ALX Ventures</strong> and <strong>Accelab x MDJS</strong> accelerator programs",
+                    "Established the foundation for scaling into additional coaching categories",
+                    "Created a complete MVP ready for beta testing"
+                ]
+            },
+            "vouchify": {
+                "title": "VOUCHIFY",
+                "subtitle": "Digital Membership & Voucher Platform",
+                "metrics": {
+                    "businesses": {
+                        "label": "Businesses",
+                        "value": "1000+"
+                    },
+                    "subscriptions": {
+                        "label": "Subscriptions Sold",
+                        "value": "100K+"
+                    },
+                    "countries": {
+                        "label": "Countries",
+                        "value": "20+"
+                    }
+                },
+                "overview": [
+                    "Vouchify is a digital membership and voucher platform that enables businesses to create, distribute, and manage digital passes that integrate seamlessly with mobile wallets.",
+                    "As a Full-Stack Developer and Product Designer, I worked on both the user experience and technical implementation of key platform features."
+                ],
+                "challenge": [
+                    "Traditional membership and voucher systems often rely on outdated processes, creating friction for both businesses and customers. The challenge was to create a scalable and intuitive platform that simplified pass creation, management, and distribution."
+                ],
+                "roles": [
+                    "Product Design",
+                    "Full-Stack Development",
+                    "User Experience Design",
+                    "Feature Planning",
+                    "Technical Architecture"
+                ],
+                "solution": "I helped create a modern digital membership and voucher platform that made it easy for businesses to issue, manage, and distribute digital passes while delivering a seamless experience for end users. The product was designed to eliminate the complexity traditionally associated with membership programs by providing intuitive workflows, streamlined onboarding, and centralized management tools. I worked across both design and development to ensure that businesses could efficiently manage their digital offerings while customers could easily access and use passes through mobile wallet integrations. The result was a scalable platform that combined simplicity, flexibility, and strong user experience, making digital memberships more accessible for organizations of all sizes.",
+                "processText": [
+                    "I worked closely with the founding team to understand business requirements and user expectations.",
+                    "The focus was on:"
+                ],
+                "processBullets": [
+                    "Streamlining onboarding flows",
+                    "Simplifying pass management",
+                    "Creating intuitive dashboards",
+                    "Ensuring mobile wallet compatibility",
+                    "Building scalable frontend experiences"
+                ],
+                "processFooter": "Every feature was designed to reduce complexity while maintaining flexibility for different business use cases.",
+                "outcomeBullets": [
+                    "Delivered end-to-end product experiences from design to implementation",
+                    "Improved usability through simplified workflows",
+                    "Built scalable frontend architecture for future growth",
+                    "Helped create a seamless digital membership experience for businesses and customers"
+                ]
+            },
+            "lifeline": {
+                "title": "LifeLine",
+                "subtitle": "Health-Tech Platform",
+                "metrics": {
+                    "providers": {
+                        "label": "Healthcare Providers",
+                        "value": "200+"
+                    },
+                    "transactions": {
+                        "label": "Transactions Processed",
+                        "value": "14k+"
+                    },
+                    "countries": {
+                        "label": "Countries",
+                        "value": "5+"
+                    }
+                },
+                "overview": [
+                    "LifeLine is a healthcare platform designed to improve access to medical services through digital solutions that connect patients, healthcare providers, pharmacies, and insurers. The platform includes appointment booking, insurance workflows, pharmacy management tools, and patient engagement experiences.",
+                    "As a Product Designer and Frontend Developer, I contributed to both the design and implementation of multiple products within the LifeLine ecosystem."
+                ],
+                "challenge": [
+                    "Healthcare workflows are often complex, fragmented, and difficult for patients to navigate. Providers also face operational challenges caused by disconnected systems and inefficient processes.",
+                    "The objective was to simplify healthcare interactions while maintaining compliance, trust, and accessibility for all stakeholders."
+                ],
+                "roles": [
+                    "Product Design",
+                    "UX/UI Design",
+                    "Frontend Development",
+                    "Workflow Optimization",
+                    "User Journey Mapping"
+                ],
+                "solution": "The solution focused on creating a unified digital healthcare experience that simplified interactions between patients, healthcare providers, pharmacies, and insurance partners. I designed and developed intuitive interfaces that transformed complex healthcare workflows into clear, user-friendly experiences. This included patient appointment booking journeys, insurance onboarding processes, pharmacy management tools, and provider dashboards. By establishing a consistent design system and reusable frontend components, I ensured a seamless experience across the entire ecosystem while improving efficiency for both end users and healthcare professionals. The final product reduced friction throughout the healthcare journey and provided a scalable foundation for future services and integrations.",
+                "processText": [
+                    "I collaborated closely with stakeholders to understand the needs of patients, clinics, pharmacies, and insurance partners.",
+                    "The design process focused on:"
+                ],
+                "processBullets": [
+                    "Simplifying healthcare journeys",
+                    "Reducing cognitive load",
+                    "Improving information accessibility",
+                    "Creating scalable design systems",
+                    "Building responsive interfaces"
+                ],
+                "processFooter": "I translated complex healthcare processes into intuitive digital experiences while ensuring consistency across the platform.",
+                "outcomeBullets": [
+                    "Delivered responsive and scalable interfaces across multiple healthcare products",
+                    "Improved workflow efficiency through intuitive dashboard experiences",
+                    "Helped create a consistent design language across the platform",
+                    "Accelerated development through reusable components and structured frontend architecture"
+                ]
+            }
+        }
+    },
+    "skills": {
+        "title": "Technical Expertise",
+        "subtitle1": "Full-stack Capabilities From",
+        "subtitle2": "Design",
+        "subtitle3": "To",
+        "subtitle4": "Deploy"
+    },
+    "startups": {
+        "title": "Startup Builder",
+        "subtitle1": "I Build",
+        "subtitle2": "Startups",
+        "subtitle3": "not just Features",
+        "ctaTitle": "Need a co-founder-level collaborator?",
+        "ctaDesc": "I embed with founding teams to drive product from 0→1 — design, engineering, and strategy in one person.",
+        "ctaButton": "Get In Touch",
+        "cards": [
+            {
+                "title": "Product Strategy",
+                "description": "From market research to product vision — I define the roadmap that balances user needs with business goals.",
+                "tags": [
+                    "Market Sizing",
+                    "OKR Settings",
+                    "Roadmap Planning",
+                    "Conmpetetive Analysis"
+                ]
+            },
+            {
+                "title": "MVP Development",
+                "description": "I ship working products fast. Design + engineering in one person means fewer handoffs, faster iterations.",
+                "tags": [
+                    "4 - 8 Week MVP Cycles",
+                    "Full-Stack Execution",
+                    "Design → Code",
+                    "Lean Validation"
+                ]
+            },
+            {
+                "title": "AI-Powered Development",
+                "description": "I use AI tools natively — from code generation to design automation — to build at startup speed.",
+                "tags": [
+                    "Cursor IDE",
+                    "Claude API",
+                    "AI Prototyping",
+                    "Prompt Engineering"
+                ]
+            },
+            {
+                "title": "User Experience Design",
+                "description": "Every interaction is intentional. I design for clarity, delight, and conversion — not just aesthetics.",
+                "tags": [
+                    "UX Research",
+                    "Wireframing",
+                    "Hi-Fi Prototypes",
+                    "Design Systems"
+                ]
+            },
+            {
+                "title": "Marketplace Design",
+                "description": "I understand two-sided marketplace dynamics — designing for both supply and demand simultaneously.",
+                "tags": [
+                    "Supply & Demand UX",
+                    "Trust Systems",
+                    "Search & Discovery ",
+                    "Onboarding Flows"
+                ]
+            },
+            {
+                "title": "Startup Operations",
+                "description": "As a founder, I've navigated fundraising, team building, legal structure, and early customer acquisition.",
+                "tags": [
+                    "Fundraising",
+                    "Team Building",
+                    "Legal Structure",
+                    "Metrics & KPIs"
+                ]
+            }
+        ]
+    },
+    "education": {
+        "title": "Education & Certifications",
+        "subtitle": "Credentials & Continuous Learning",
+        "academic": "Academic Education",
+        "certifications": "Certifications",
+        "showCredential": "Show Credential",
+        "academicList": [
+            {
+                "title": "European Master in Intelligent Applications & Big Data",
+                "institution": "MIAGE Casablanca | FEDE",
+                "date": "2024 - 2026",
+                "description": "Advanced study in AI systems, machine learning, big data architectures, and intelligent application design"
+            },
+            {
+                "title": "Bachelor in Automation Engineering",
+                "institution": "FST Settat",
+                "date": "2016 - 2017",
+                "description": "Foundation in systems engineering, control systems, and automation — building analytical and technical problem-solving skills"
+            }
+        ],
+        "certificationsList": [
+            {
+                "title": "Software Engineering",
+                "institution": "ALX Africa",
+                "date": "November 2024",
+                "description": "Intensive 12-month program covering full-stack development, algorithms, system design, and engineering best practices"
+            },
+            {
+                "title": "McKinsey Forward Program",
+                "institution": "McKinsey & Company",
+                "date": "July 2024",
+                "description": "Selected for McKinsey's leadership and problem-solving program for high-potential individuals from emerging markets"
+            },
+            {
+                "title": "Founder Academy",
+                "institution": "ALX Ventures",
+                "date": "July 2024",
+                "description": "Startup fundamentals — product-market fit, fundraising, go-to-market strategy, and founding team dynamics"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "subtitle1": "What",
+        "subtitle2": "Founders",
+        "subtitle3": "Clients",
+        "subtitle4": "Say",
+        "list": [
+            {
+                "name": "King Chukwumere",
+                "role": "CEO, LifeLine Africa",
+                "content": "Working with Mohsine was the best decision we made. He delivered a complex healthcare platform on time and exceeding our expectations. His attention to UX details and scalable architecture is outstanding."
+            },
+            {
+                "name": "Anas Oudadsse",
+                "role": "CTO, MYCOACH",
+                "content": "Mohsine is exceptional. He didn't just build our product; he helped shape our entire business strategy. His technical skills are matched only by his understanding of product-market fit. A true asset to any founding team."
+            }
+        ]
+    },
+    "contact": {
+        "title1": "Let's Build",
+        "title2": "Together",
+        "subtitle": "Have a project in mind, or just want to say hi? I'm always open to discussing product design work or partnership opportunities.",
+        "getInTouch": "Get in touch",
+        "getInTouchDesc": "Whether you have a question or just want to connect, my inbox is always open. I'll try my best to get back to you!",
+        "bookACall": "Book a Call",
+        "bookACallDesc": "Schedule a 30 min call with me",
+        "connectWithMe": "Connect with me",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "placeholder": "Tell me about your project...",
+        "sendMessage": "Send Message",
+        "sending": "Sending...",
+        "success": "Message sent! I'll get back to you soon.",
+        "error": "Something went wrong. Please try emailing me directly."
+    },
+    "footer": {
+        "copyright": "© {{year}} Mohsine Hourmat Allah. All rights reserved."
+    }
+}

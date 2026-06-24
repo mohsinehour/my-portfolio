@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import htmlIcon from '../assets/technical-experties/html.png';
 import cssIcon from '../assets/technical-experties/css.png';
 import javascriptIcon from '../assets/technical-experties/javascript.png';
@@ -46,6 +47,7 @@ const skills = [
 ];
 
 export default function Skills() {
+  const { t } = useTranslation();
   return (
     <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,11 +59,15 @@ export default function Skills() {
           className="flex flex-col items-start mb-12 text-left"
         >
           <h2 className="text-md mb-2 tracking-widest font-medium uppercase bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">
-            Technical Expertise
+            {t('skills.title')}{' '}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Full-stack capabilities from <span className="bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent">Design</span> to <span className="bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent">Deploy</span>
+            {t('skills.subtitle1')}{' '}
+            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>{t('skills.subtitle2')}</span>{' '}
+            {t('skills.subtitle3')}{' '}
+            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>{t('skills.subtitle4')}</span>
           </h2>
+
         </motion.div>
 
         <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 md:gap-8 justify-items-center">

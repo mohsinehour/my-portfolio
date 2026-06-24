@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Award, Calendar, ExternalLink, GraduationCap, MousePointerClick } from 'lucide-react';
 import fstLogo from '../assets/education-certifications/fst-logo.png';
@@ -10,54 +11,20 @@ import softwareEngineeringBg from '../assets/education-certifications/software-e
 import mckinseyBg from '../assets/education-certifications/mcKinsey.jpg';
 import founderAcademyBg from '../assets/education-certifications/founder-academy.png';
 
-const education = [
-  {
-    title: 'European Master in Intelligent Applications & Big Data',
-    institution: 'MIAGE Casablanca | FEDE',
-    date: '2024 - 2026',
-    description: 'Advanced study in AI systems, machine learning, big data architectures, and intelligent application design',
-    image: fedeLogo,
-  },
-  {
-    title: 'Bachelor in Automation Engineering',
-    institution: 'FST Settat',
-    date: '2016 - 2017',
-    description: 'Foundation in systems engineering, control systems, and automation — building analytical and technical problem-solving skills',
-    image: fstLogo,
-  }
-];
+const educationLogos = [fedeLogo, fstLogo];
 
-const certifications = [
-  {
-    title: 'Software Engineering',
-    institution: 'ALX Africa',
-    date: 'November 2024',
-    description: 'Intensive 12-month program covering full-stack development, algorithms, system design, and engineering best practices',
-    bgImage: softwareEngineeringBg,
-    logo: alxLogo,
-    credential: "https://intranet.alxswe.com/certificates/N5YnzP8frB",
-  },
-  {
-    title: 'McKinsey Forward Program',
-    institution: 'McKinsey & Company',
-    date: 'July 2024',
-    description: 'Selected for McKinsey\'s leadership and problem-solving program for high-potential individuals from emerging markets',
-    bgImage: mckinseyBg,
-    logo: mckinseyLogo,
-    credential: "https://www.credly.com/badges/186b2104-af1a-4f5c-a200-f28ffde61ee7/",
-  },
-  {
-    title: 'Founder Academy',
-    institution: 'ALX Ventures',
-    date: 'July 2024',
-    description: 'Startup fundamentals — product-market fit, fundraising, go-to-market strategy, and founding team dynamics',
-    bgImage: founderAcademyBg,
-    logo: alxVenturesLogo,
-    credential: "https://intranet.alxswe.com/certificates/L7Nrme6XHM",
-  },
+const certificationBgImages = [softwareEngineeringBg, mckinseyBg, founderAcademyBg];
+const certificationLogos = [alxLogo, mckinseyLogo, alxVenturesLogo];
+const certificationCredentials = [
+  "https://intranet.alxswe.com/certificates/N5YnzP8frB",
+  "https://www.credly.com/badges/186b2104-af1a-4f5c-a200-f28ffde61ee7/",
+  "https://intranet.alxswe.com/certificates/L7Nrme6XHM"
 ];
 
 export default function Education() {
+  const { t } = useTranslation();
+  const education = (t('education.academicList', { returnObjects: true }) as any[]).map((e, i) => ({ ...e, image: educationLogos[i] }));
+  const certifications = (t('education.certificationsList', { returnObjects: true }) as any[]).map((c, i) => ({ ...c, bgImage: certificationBgImages[i], logo: certificationLogos[i], credential: certificationCredentials[i] }));
   const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
   const toggleFlip = (index: number) => {
@@ -76,17 +43,17 @@ export default function Education() {
         >
           <h2 className="text-md mb-2 tracking-widest font-medium uppercase bg-clip-text text-transparent"
             style={{ backgroundImage: 'linear-gradient(to right, #0088FF 0%, #1D2939 30%)' }}>
-            Education & Certifications
+            {t('education.title')}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Credentials & <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">Continuous Learning</span>
+            {t('education.subtitle')}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* EDUCATION */}
           <div className="flex flex-col gap-5">
-            <h3 className="flex items-center gap-2 text-xl font-bold text-primary"><GraduationCap size={24} className="text-brand" /> Academic Education</h3>
+            <h3 className="flex items-center gap-2 text-xl font-bold text-primary"><GraduationCap size={24} className="text-brand" /> {t('education.academic')}</h3>
             {education.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -116,7 +83,7 @@ export default function Education() {
 
           {/* CERTIFICATIONS — flip cards (hover on desktop, tap on mobile) */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-xl font-bold text-primary flex items-center gap-2"><Award size={24} className="text-brand" /> Certifications</h3>
+            <h3 className="text-xl font-bold text-primary flex items-center gap-2"><Award size={24} className="text-brand" /> {t('education.certifications')}</h3>
             {certifications.map((item, index) => {
               const isFlipped = flippedIndex === index;
 
@@ -181,7 +148,7 @@ export default function Education() {
                           rel='noopener noreferrer'
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <div className="flex items-center gap-2 rounded-full px-3 py-1 shadow-sm  text-xs font-small text-gray-400 mb-1 hover:scale-105 hover:-translate-y-0.5 hover:text-white hover:bg-gradient-brand text-center transition-all duration-200">Show Credential <ExternalLink size={14} /></div>
+                          <div className="flex items-center gap-2 rounded-full px-3 py-1 shadow-sm  text-xs font-small text-gray-400 mb-1 hover:scale-105 hover:-translate-y-0.5 hover:text-white hover:bg-gradient-brand text-center transition-all duration-200">{t('education.showCredential')} <ExternalLink size={14} /></div>
                         </a>
                       </div>
                       <div className='flex items-center justify-between text-sm text-brand w-full mb-2'>

@@ -10,7 +10,10 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import logo from './assets/logo.png';
 
+import { useTranslation } from 'react-i18next';
+
 function App() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-brand selection:text-white">
       <Navbar />
@@ -30,7 +33,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <img src={logo} alt="logo" className="w-12 h-12" />
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Mohsine Hourmat Allah. All rights reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </footer>
