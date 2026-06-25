@@ -40,7 +40,7 @@ function LanguageDropdown() {
       {/* Trigger */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex items-center gap-1.5 text-secondary hover:text-brand transition-colors text-sm font-medium"
+        className="flex items-center gap-1.5 text-secondary hover:text-brand transition-colors text-sm font-medium cursor-pointer"
         aria-label="Select language"
       >
         <span className="w-5 h-5 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
@@ -62,7 +62,7 @@ function LanguageDropdown() {
             <button
               key={lang.code}
               onClick={() => handleSelect(lang)}
-              className="flex items-center gap-3 w-full px-4 py-3 text-sm text-primary hover:bg-gray-50 transition-colors"
+              className="flex items-center gap-3 w-full px-4 py-3 text-sm text-primary hover:bg-gray-50 transition-colors cursor-pointer"
             >
               {/* Checkmark — visible only for selected */}
               <span className={`w-4 flex-shrink-0 ${selected.code === lang.code ? 'text-brand' : 'text-transparent'}`}>
@@ -92,18 +92,18 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#about" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.about')}</a>
-          <a href="#experience" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.experience')}</a>
-          <a href="#work" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.work')}</a>
-          <a href="#skills" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.skills')}</a>
-          <a href="#education" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.education')}</a>
-          <a href="#contact" className="text-secondary hover:text-brand transition-colors text-sm font-medium">{t('nav.contact')}</a>
+          <a href="#about" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.about')}</a>
+          <a href="#experience" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.experience')}</a>
+          <a href="#work" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.work')}</a>
+          <a href="#skills" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.skills')}</a>
+          <a href="#education" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.education')}</a>
+          <a href="#contact" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.contact')}</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
           <LanguageDropdown />
-          <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
-            {t('nav.letsTalk')} <ArrowUpRight size={16} />
+          <a href="#contact" className="group inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:scale-102 duration-200">
+            {t('nav.letsTalk')} <ArrowUpRight size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200' />
           </a>
         </div>
 

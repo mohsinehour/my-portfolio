@@ -79,7 +79,7 @@ export default function Contact() {
                     <Calendar size={24} className="text-white" />
                   </div>
                   <div>
-                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:scale-105 hover:underline transition-transform duration-300 ease-in-out flex items-center gap-2">{t('contact.bookACall')} <ExternalLink size={18} /></a>
+                    <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target="_blank" rel="noopener noreferrer" className="group text-lg font-semibold hover:scale-105 hover:underline transition-transform duration-300 ease-in-out flex items-center gap-2">{t('contact.bookACall')} <ExternalLink size={18} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-in-out' /></a>
                     <p className="font-md text-md text-white">{t('contact.bookACallDesc')}</p>
                   </div>
                 </div>

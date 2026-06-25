@@ -138,8 +138,8 @@ export default function Startups() {
             <p className='text-white text-md leading-relaxed'>{t('startups.ctaDesc')}</p>
           </div>
           <div className="flex items-center space-x-4">
-            <a href="#contact" className="inline-flex w-full items-center justify-center gap-2 bg-white text-primary px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
-              {t('startups.ctaButton')} <ArrowUpRight size={16} />
+            <a href="#contact" className="group inline-flex w-full items-center justify-center gap-2 bg-white text-primary px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:scale-102 duration-200">
+              {t('startups.ctaButton')} <ArrowUpRight size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-in-out' />
             </a>
           </div>
         </div>

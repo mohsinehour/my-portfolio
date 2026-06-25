@@ -83,11 +83,11 @@ export default function Hero() {
               </p>
               <div className=" flex justify-center">
                 <div className="flex items-center justify-center gap-4 px-2 py-2 w-fit">
-                  <a href="#work" className="bg-gradient-brand text-white px-6 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">
+                  <a href="#work" className="bg-gradient-brand text-white px-6 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:scale-102 duration-200 whitespace-nowrap">
                     {t('hero.viewWork')}
                   </a>
-                  <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target='_blank' rel='noopener noreferrer' className="inline-flex items-center gap-2 bg-white text-primary border border-gray-200 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">
-                    {t('hero.bookACall')} <ExternalLink size={16} />
+                  <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target='_blank' rel='noopener noreferrer' className="group inline-flex items-center gap-2 bg-white text-primary border border-gray-200 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md transform hover:scale-102 duration-200 whitespace-nowrap">
+                    {t('hero.bookACall')} <ExternalLink size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200' />
                   </a>
                 </div>
               </div>

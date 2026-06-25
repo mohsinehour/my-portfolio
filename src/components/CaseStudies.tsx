@@ -168,9 +168,9 @@ export default function CaseStudies() {
                   <p className="text-gray-300 text-sm">{study.subtitle}</p>
                   <button
                     onClick={() => setSelectedStudy(study.id)}
-                    className="inline-flex items-center justify-center gap-2 bg-gradient-brand text-white mt-2 px-8 py-1 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-brand text-white mt-2 px-8 py-1 rounded-full font-medium transition-all shadow-md hover:shadow-lg duration-200 cursor-pointer"
                   >
-                    {t('work.viewCaseStudy')} <ArrowUpRight size={16} />
+                    {t('work.viewCaseStudy')} <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
                   </button>
                 </div>
               </div>
@@ -220,9 +220,9 @@ export default function CaseStudies() {
                           href={activeStudy.site}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-gradient-brand text-white px-3 py-1 md:px-5 md:py-2 rounded-full font-medium hover:-translate-y-0.5 transition-all duration-200 shadow-md text-sm md:text-base whitespace-nowrap"
+                          className="group flex items-center gap-2 bg-gradient-brand text-white px-3 py-1 md:px-5 md:py-2 rounded-full font-medium hover:scale-102 transition-all duration-200 shadow-md text-sm md:text-base whitespace-nowrap"
                         >
-                          {t('work.visitLiveSite')} <ExternalLink size={16} />
+                          {t('work.visitLiveSite')} <ExternalLink size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-in-out' />
                         </a>
                       )}
                     </div>

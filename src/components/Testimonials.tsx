@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import kingChukwumere from '../assets/testimonials/king-lifeline.jpg';
 import anasOudadsse from '../assets/testimonials/anas-mycoach.jpeg';
+import lotfBelych from '../assets/testimonials/lotf-alx.jpg';
 
-const testimonialImages = [kingChukwumere, anasOudadsse];
+const testimonialImages = [kingChukwumere, anasOudadsse, lotfBelych];
 
 const AUTOPLAY_INTERVAL = 4000;
 

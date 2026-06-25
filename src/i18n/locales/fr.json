@@ -373,8 +373,8 @@
     "testimonials": {
         "title": "Témoignages",
         "subtitle1": "Ce que disent",
-        "subtitle2": "les fondateurs",
-        "subtitle3": "les clients",
+        "subtitle2": "Les Fondateurs",
+        "subtitle3": "Les Clients",
         "subtitle4": "",
         "list": [
             {
@@ -386,6 +386,11 @@
                 "name": "Anas Oudadsse",
                 "role": "CTO, MYCOACH",
                 "content": "Mohsine est exceptionnel. Il n'a pas seulement construit notre produit ; il a contribué à façonner toute notre stratégie commerciale. Ses compétences techniques n'ont d'égal que sa compréhension de l'adéquation produit-marché. Un véritable atout pour toute équipe fondatrice."
+            },
+            {
+                "name": "Lotf Belych",
+                "role": "Responsable de programme, ALX Ventures",
+                "content": "Mohsine s'est distingué au sein du programme ALX Ventures comme un fondateur alliant expertise technique et sens aigu de l'entrepreneuriat. Sa capacité à valider des idées, à développer des produits et à s'adapter rapidement aux défis témoigne de l'état d'esprit d'un véritable bâtisseur de startups. Je suis convaincu qu'il continuera à avoir un impact significatif grâce aux entreprises qu'il dirigera."
             }
         ]
     },

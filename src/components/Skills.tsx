@@ -63,9 +63,11 @@ export default function Skills() {
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {t('skills.subtitle1')}{' '}
-            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>{t('skills.subtitle2')}</span>{' '}
+            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>
+              {t('skills.subtitle2')}</span>{' '}
             {t('skills.subtitle3')}{' '}
-            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>{t('skills.subtitle4')}</span>
+            <span className='bg-gradient-to-r from-brand to-primary bg-clip-text text-transparent'>
+              {t('skills.subtitle4')}</span>
           </h2>
 
         </motion.div>
@@ -75,7 +77,7 @@ export default function Skills() {
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, scale: 0.8, y: 10 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, delay: index * 0.08, ease: "easeOut" } }}
+              whileInView={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, delay: index * 0.03, ease: "easeOut" } }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
               whileHover={{ scale: 1.05, y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
