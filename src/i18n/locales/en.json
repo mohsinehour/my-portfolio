@@ -56,7 +56,7 @@
             },
             {
                 "company": "VOUCHIFY",
-                "role": "Product Designer & Web Developer",
+                "role": "Co-Founder & Engineer",
                 "dates": "January 2026 - Present",
                 "description": "Developed the web platform for a digital membership and voucher management system that helps businesses retain customers through wallet-based loyalty programs.",
                 "key_contributions": [
@@ -331,7 +331,8 @@
     },
     "education": {
         "title": "Education & Certifications",
-        "subtitle": "Credentials & Continuous Learning",
+        "subtitle1": "Credentials & ",
+        "subtitle2": "Continuous Learning",
         "academic": "Academic Education",
         "certifications": "Certifications",
         "showCredential": "Show Credential",

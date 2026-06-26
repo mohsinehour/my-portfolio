@@ -56,7 +56,7 @@
             },
             {
                 "company": "VOUCHIFY",
-                "role": "Product Designer & Développeur Web",
+                "role": "Co-fondateur & Ingénieur",
                 "dates": "Janvier 2026 - Présent",
                 "description": "Développement de la plateforme web pour un système numérique de gestion d'adhésions et de bons de réduction qui aide les entreprises à fidéliser leurs clients via des programmes de fidélité basés sur les portefeuilles numériques.",
                 "key_contributions": [
@@ -331,7 +331,8 @@
     },
     "education": {
         "title": "Formation & Certifications",
-        "subtitle": "Titres et Apprentissage continu",
+        "subtitle1": "Titres & ",
+        "subtitle2": "Apprentissage Continu",
         "academic": "Formation Académique",
         "certifications": "Certifications",
         "showCredential": "Voir le certificat",

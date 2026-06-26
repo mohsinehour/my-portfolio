@@ -43,7 +43,7 @@ export default function Education() {
             {t('education.title')}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            {t('education.subtitle')}
+            {t('education.subtitle1')}<span className='bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary'>{t('education.subtitle2')}</span>
           </h2>
         </motion.div>
 
