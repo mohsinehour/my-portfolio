@@ -2,19 +2,16 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Award, Calendar, ExternalLink, GraduationCap, MousePointerClick } from 'lucide-react';
-import fstLogo from '../assets/education-certifications/fst-logo.png';
-import fedeLogo from '../assets/education-certifications/fede-logo.png';
-import alxLogo from '../assets/education-certifications/alx-logo.jpeg';
-import alxVenturesLogo from '../assets/education-certifications/alx-ventures-logo.png';
-import mckinseyLogo from '../assets/education-certifications/mckinsey-logo.png';
-import softwareEngineeringBg from '../assets/education-certifications/software-engineering.jpg';
-import mckinseyBg from '../assets/education-certifications/mcKinsey.jpg';
-import founderAcademyBg from '../assets/education-certifications/founder-academy.png';
 
-const educationLogos = [fedeLogo, fstLogo];
+const educationLogos = ["https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469373/fede-logo_gsfgfb.png",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469375/fst-logo_wiwk4z.png"];
 
-const certificationBgImages = [softwareEngineeringBg, mckinseyBg, founderAcademyBg];
-const certificationLogos = [alxLogo, mckinseyLogo, alxVenturesLogo];
+const certificationBgImages = ["https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469379/software-engineering_y4hgyy.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469377/mcKinsey_hhvahy.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469374/founder-academy_osasxv.png"];
+const certificationLogos = ["https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469351/alx-logo_wfx2ml.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469377/mckinsey-logo_m2flvx.png",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469352/alx-ventures-logo_l9sbwd.png"];
 const certificationCredentials = [
   "https://intranet.alxswe.com/certificates/N5YnzP8frB",
   "https://www.credly.com/badges/186b2104-af1a-4f5c-a200-f28ffde61ee7/",

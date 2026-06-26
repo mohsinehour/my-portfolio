@@ -1,61 +1,22 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import kingChukwumere from '../assets/testimonials/king-lifeline.jpg';
-import anasOudadsse from '../assets/testimonials/anas-mycoach.jpeg';
-import lotfBelych from '../assets/testimonials/lotf-alx.jpg';
 
-const testimonialImages = [kingChukwumere, anasOudadsse, lotfBelych];
-
-const AUTOPLAY_INTERVAL = 4000;
+const testimonialImages = ["https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469663/king-lifeline_d6tzdk.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469660/anas-mycoach_uafzua.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469664/lotf-alx_vxi9qy.jpg",
+  "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782469662/ghita_n8ph9l.jpg"];
 
 export default function Testimonials() {
   const { t } = useTranslation();
-  const testimonials = (t('testimonials.list', { returnObjects: true }) as any[]).map((tItem, i) => ({ ...tItem, image: testimonialImages[i] }));
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const isAutoScrolling = useRef(false);
+  const testimonials = (t('testimonials.list', { returnObjects: true }) as any[]).map(
+    (tItem, i) => ({ ...tItem, image: testimonialImages[i] })
+  );
 
-  const scrollToIndex = useCallback((index: number) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const cardWidth = el.scrollWidth / testimonials.length;
-    isAutoScrolling.current = true;
-    el.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
-  }, []);
+  // Duplicate for seamless infinite loop
+  const doubled = [...testimonials, ...testimonials];
 
-  const goToIndex = (index: number) => {
-    setActiveIndex(index);
-    scrollToIndex(index);
-  };
-
-  // Autoplay — advances to next card, loops infinitely
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => {
-        const next = (prev + 1) % testimonials.length;
-        scrollToIndex(next);
-        return next;
-      });
-    }, AUTOPLAY_INTERVAL);
-    return () => clearInterval(timer);
-  }, [scrollToIndex]);
-
-  // Manual scroll detection — updates activeIndex + dots when user scrolls by hand
-  const handleScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const cardWidth = el.scrollWidth / testimonials.length;
-    const index = Math.round(el.scrollLeft / cardWidth);
-    setActiveIndex(Math.min(Math.max(index, 0), testimonials.length - 1));
-  }, []);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    el.addEventListener('scroll', handleScroll, { passive: true });
-    return () => el.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  const [paused, setPaused] = useState(false);
 
   return (
     <section id="testimonials" className="py-20 bg-background">
@@ -67,29 +28,52 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-md mb-2 tracking-widest font-medium uppercase bg-clip-text text-transparent"
-            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 16%, #1D2939 100%)' }}>
+          <h2
+            className="text-md mb-2 tracking-widest font-medium uppercase bg-clip-text text-transparent"
+            style={{ backgroundImage: 'linear-gradient(to right, #0088FF 16%, #1D2939 100%)' }}
+          >
             {t('testimonials.title')}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            {t('testimonials.subtitle1')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">{t('testimonials.subtitle2')}</span> & <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">{t('testimonials.subtitle3')}</span> {t('testimonials.subtitle4')}
+            {t('testimonials.subtitle1')}{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">
+              {t('testimonials.subtitle2')}
+            </span>{' '}
+            &{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">
+              {t('testimonials.subtitle3')}
+            </span>{' '}
+            {t('testimonials.subtitle4')}
           </h2>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
-          {/* Carousel — horizontal scroll-snap */}
+        {/* Overflow clip wrapper */}
+        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_2%,black_98%,transparent)]">
+          {/* Marquee track */}
           <div
-            ref={scrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]"
+            className="flex items-stretch gap-6 w-max my-4 cursor-pointer"
+            style={{
+              animation: 'marquee 30s linear infinite',
+              animationPlayState: paused ? 'paused' : 'running',
+            }}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}
+            onTouchEnd={() => setPaused(false)}
           >
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.name} className="w-full shrink-0 snap-center px-1">
-                <div className="px-8 py-6 rounded-3xl glass-card relative min-h-[280px]">
-                  {/* Quote mark decoration */}
+            {doubled.map((testimonial, i) => (
+              <div key={`${testimonial.name}-${i}`} className="w-[340px] shrink-0 flex">
+                <div
+                  className="px-8 py-6 rounded-3xl bg-white shadow-sm relative flex flex-col w-full transition-all duration-300 ease-out hover:scale-[1.02]"
+                >
+                  {/* Decorations */}
                   <div className="absolute top-8 left-8 text-6xl text-gray-100 font-serif leading-none select-none">"</div>
+                  <div className="absolute top-6 right-8 text-md bg-gradient-brand text-transparent bg-clip-text font-serif leading-none select-none">
+                    ★★★★★
+                  </div>
 
-                  <div className="relative z-10 mt-10">
-                    <p className="text-primary text-md leading-snug mb-6">
+                  <div className="relative z-10 mt-10 flex flex-col flex-1">
+                    <p className="text-primary text-md leading-snug mb-4 flex-1">
                       {testimonial.content}
                     </p>
                     <div className="flex items-center gap-4">
@@ -98,7 +82,9 @@ export default function Testimonials() {
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
-                          onError={(e) => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=0D8ABC&color=fff`; }}
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=0D8ABC&color=fff`;
+                          }}
                         />
                       </div>
                       <div>
@@ -111,23 +97,16 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-
-          {/* Dot navigation */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToIndex(index)}
-                aria-label={`Go to testimonial ${index + 1}`}
-                className={`rounded-full transition-all duration-300 ${index === activeIndex
-                  ? 'w-8 h-2.5 bg-gradient-brand'
-                  : 'w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400'
-                  }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
+
+      {/* Keyframe — injected once, scoped to this component */}
+      <style>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   );
 }

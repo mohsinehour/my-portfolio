@@ -2,18 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { X, ExternalLink, ArrowUpRight } from 'lucide-react';
-import mycoachCaseStudyImage from '../assets/featured-work/mycoach-casestudy.png';
-import vouchifyCaseStudyImage from '../assets/featured-work/vouchify-casestudy.png';
-import lifelineCaseStudyImage from '../assets/featured-work/lifeline-casestudy.png';
-import mycoachOverviewImg from '../assets/featured-work/mycoach-header.png';
-import vouchifyOverviewImg from '../assets/featured-work/vouchify-header.png';
-import lifelineOverviewImg from '../assets/featured-work/lifeline-header.png';
-import vouchifySolutionImg from '../assets/featured-work/vouchify-solution.png';
-import vouchifyOutcomeImg from '../assets/featured-work/vouchify-outcome.png';
-import lifelineSolutionImg from '../assets/featured-work/lifeline-solution.png';
-import lifelineOutcomeImg from '../assets/featured-work/lifeline-outcome.png';
-import mycoachSolutionImg from '../assets/featured-work/mycoach-solution.jpg';
-import mycoachOutcomeImg from '../assets/featured-work/mycoach-outcome.jpg';
 
 
 
@@ -59,28 +47,28 @@ type CaseStudy = {
 const studiesBase = [
   {
     id: 'mycoach',
-    image: mycoachCaseStudyImage,
-    overviewImage: mycoachOverviewImg,
-    solutionImage: mycoachSolutionImg,
-    outcomeImage: mycoachOutcomeImg,
+    image: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468803/mycoach-casestudy_tsukzz.png",
+    overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468805/mycoach-header_ijp9oi.png",
+    solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468807/mycoach-solution_b9fe3q.jpg",
+    outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468805/mycoach-outcome_mmbvre.jpg",
     technologies: ['React', 'Laravel', 'MySQL', 'Figma'],
     site: 'https://mycoach.ma/',
   },
   {
     id: 'vouchify',
-    image: vouchifyCaseStudyImage,
-    overviewImage: vouchifyOverviewImg,
-    solutionImage: vouchifySolutionImg,
-    outcomeImage: vouchifyOutcomeImg,
+    image: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468808/vouchify-casestudy_pcbtlh.png",
+    overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468966/vouchify-header_cqbosp.png",
+    solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468811/vouchify-solution_r1zyru.png",
+    outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468810/vouchify-outcome_g7dwp0.png",
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma'],
     site: 'https://usevouchify.com/',
   },
   {
     id: 'lifeline',
-    image: lifelineCaseStudyImage,
-    overviewImage: lifelineOverviewImg,
-    solutionImage: lifelineSolutionImg,
-    outcomeImage: lifelineOutcomeImg,
+    image: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468785/lifeline-casestudy_n6lqqs.png",
+    overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468965/lifeline-header_bxs3bd.png",
+    solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468802/lifeline-solution_r8yn2k.png",
+    outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468802/lifeline-outcome_ocguwd.png",
     technologies: ['TypeScript', 'React', 'Node.js', 'Figma'],
     site: 'https://mylifeline.health/',
   },
@@ -212,7 +200,7 @@ export default function CaseStudies() {
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/1200x600'; }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 md:p-8">
-                  <div className="flex flex-col gap-2 w-full">
+                  <motion.div className="flex flex-col gap-2 w-full" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <div className="flex items-center gap-4 w-full">
                       <h2 className="text-4xl font-bold text-white">{activeStudy.title}</h2>
                       {activeStudy.site && (
@@ -227,37 +215,44 @@ export default function CaseStudies() {
                       )}
                     </div>
                     <p className="text-xl text-gray-300">{activeStudy.subtitle}</p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
 
               <div className="p-8">
                 {/* Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-10">
+                <motion.div className="grid grid-cols-3 gap-4 mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                   {activeStudy.metrics.map((metric, i) => (
                     <div key={i} className="text-center p-2 md:p-4 rounded-2xl border border-gray-100 bg-gray-50">
                       <h4 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-1">{metric.value}</h4>
                       <p className="text-sm md:font-medium text-secondary">{metric.label}</p>
                     </div>
                   ))}
-                </div>
+                </motion.div>
 
                 <div className="space-y-8">
                   {/* Overview */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-3">{t('work.overview')}</h3>
                     <div className="text-primary leading-relaxed">{activeStudy.overview}</div>
-                    <SectionImage src={activeStudy.overviewImage} alt={`${activeStudy.title} overview`} />
-                  </div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px 0px" }}
+                      transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+                    >
+                      <SectionImage src={activeStudy.overviewImage} alt={`${activeStudy.title} overview`} />
+                    </motion.div>
+                  </motion.div>
 
                   {/* Challenge */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-3">{t('work.theChallenge')}</h3>
                     <div className="text-primary leading-relaxed">{activeStudy.challenge}</div>
-                  </div>
+                  </motion.div>
 
                   {/* Role */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-4">{t('work.myRole')}</h3>
                     <div className="flex flex-wrap gap-3">
                       {activeStudy.role.map((role, i) => (
@@ -266,30 +261,44 @@ export default function CaseStudies() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Solution */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-3">{t('work.solution')}</h3>
                     <div className="text-primary leading-relaxed">{activeStudy.solution}</div>
-                    <SectionImage src={activeStudy.solutionImage} alt={`${activeStudy.title} solution`} />
-                  </div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px 0px" }}
+                      transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+                    >
+                      <SectionImage src={activeStudy.solutionImage} alt={`${activeStudy.title} solution`} />
+                    </motion.div>
+                  </motion.div>
 
                   {/* Process */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-3">{t('work.process')}</h3>
                     <div className="text-primary leading-relaxed">{activeStudy.process}</div>
-                  </div>
+                  </motion.div>
 
                   {/* Outcome */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-3">{t('work.outcome')}</h3>
                     <div className="text-primary leading-relaxed">{activeStudy.outcome}</div>
-                    <SectionImage src={activeStudy.outcomeImage} alt={`${activeStudy.title} outcome`} />
-                  </div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px 0px" }}
+                      transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+                    >
+                      <SectionImage src={activeStudy.outcomeImage} alt={`${activeStudy.title} outcome`} />
+                    </motion.div>
+                  </motion.div>
 
                   {/* Technologies */}
-                  <div>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-4">{t('work.technologies')}</h3>
                     <div className="flex flex-wrap gap-3">
                       {activeStudy.technologies.map(tech => (
@@ -298,7 +307,7 @@ export default function CaseStudies() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>

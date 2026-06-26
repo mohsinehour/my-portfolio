@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import heroImage from '../assets/hero/hero-image.jpg';
 import helloTagEn from '../assets/hero/hello-tag-en.svg';
 import helloTagFr from '../assets/hero/hello-tag-fr.svg';
 import linkedinIcon from '../assets/hero/linkedin-icon.svg';
@@ -45,7 +44,7 @@ export default function Hero() {
           >
             <div className="relative rounded-3xl overflow-hidden p-0.5 border-white/40 shadow-[0_0_10px_rgba(17,17,17,0.15)] z-10 mb-10 md:mb-0 max-w-full h-[300px] md:max-w-[540px] md:h-full">
               <img
-                src={heroImage}
+                src="https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468587/hero-image_jxf2io.jpg"
                 alt="Mohsine Hourmat Allah"
                 className="w-full object-cover rounded-[23px] h-[300px] md:h-[570px]"
                 onError={(e) => {

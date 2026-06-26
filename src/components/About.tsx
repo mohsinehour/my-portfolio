@@ -1,5 +1,4 @@
 import { Award, Package, Quote, Sprout } from 'lucide-react';
-import aboutImage from '../assets/about-image1.jpg';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -55,7 +54,7 @@ export default function About() {
 
                             <div className="relative z-10 rounded-2xl overflow-hidden w-[400px] h-[450px]">
                                 <img
-                                    src={aboutImage}
+                                    src="https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468430/about-image1_cbhz3b.jpg"
                                     alt=""
                                     className="w-full h-full object-cover"
                                 />
