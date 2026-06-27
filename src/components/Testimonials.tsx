@@ -68,7 +68,7 @@ export default function Testimonials() {
                 >
                   {/* Decorations */}
                   <div className="absolute top-8 left-8 text-6xl text-gray-100 font-serif leading-none select-none">"</div>
-                  <div className="absolute top-6 right-8 text-md bg-gradient-brand text-transparent bg-clip-text font-serif leading-none select-none">
+                  <div className="absolute top-6 right-8 text-md bg-gradient-brand text-transparent bg-clip-text font-serif leading-none select-none opacity-75">
                     ★★★★★
                   </div>
 

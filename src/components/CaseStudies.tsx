@@ -1,9 +1,86 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { X, ExternalLink, ArrowUpRight } from 'lucide-react';
+import laravelIcon from '../assets/technical-experties/laravel.png';
+import reactIcon from '../assets/technical-experties/react.png';
+import mysqlIcon from '../assets/technical-experties/mysql.png';
+import tailwindIcon from '../assets/technical-experties/tailwind.png';
+import figmaIcon from '../assets/technical-experties/figma.png';
+import nodejsIcon from '../assets/technical-experties/nodejs.png';
+import typescriptIcon from '../assets/technical-experties/typescript.png';
 
 
+// ─── Counter hook ────────────────────────────────────────────────────────────
+function useCountUp(rawValue: string, duration = 1400, start = false) {
+  // Extract leading number and trailing suffix (e.g. "95%" → 95, "%")
+  const match = rawValue.match(/^(\d+(?:\.\d+)?)(.*)$/);
+  const target = match ? parseFloat(match[1]) : null;
+  const suffix = match ? match[2] : '';
+  const isFloat = target !== null && !Number.isInteger(target);
+
+  const [display, setDisplay] = useState(target !== null ? `0${suffix}` : rawValue);
+
+  useEffect(() => {
+    if (!start || target === null) return;
+    let startTime: number | null = null;
+    const step = (ts: number) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = eased * target;
+      setDisplay(`${isFloat ? current.toFixed(1) : Math.floor(current)}${suffix}`);
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [start, target, suffix, duration, isFloat]);
+
+  return display;
+}
+
+// ─── Animated metric card ────────────────────────────────────────────────────
+function MetricCard({ value, label, start }: { value: string; label: string; start: boolean }) {
+  const animated = useCountUp(value, 1400, start);
+  return (
+    <div className="text-center p-2 md:p-4 rounded-2xl border border-gray-100 bg-gray-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out">
+      <h4 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-1">
+        {animated}
+      </h4>
+      <p className="text-sm md:font-medium text-secondary">{label}</p>
+    </div>
+  );
+}
+
+// ─── Metrics grid with IntersectionObserver ──────────────────────────────────
+function MetricsGrid({ metrics }: { metrics: { label: string; value: string }[] }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    setInView(false); // reset on each modal open
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [metrics]); // re-run when a different study opens
+
+  return (
+    <motion.div
+      ref={ref}
+      className="grid grid-cols-3 gap-4 mb-10"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      {metrics.map((metric, i) => (
+        <MetricCard key={i} value={metric.value} label={metric.label} start={inView} />
+      ))}
+    </motion.div>
+  );
+}
 
 const BulletList = ({ items }: { items: string[] }) => (
   <ul className="flex flex-col items-start gap-3 mt-3">
@@ -20,7 +97,7 @@ const SectionImage = ({ src, alt }: { src?: string; alt: string }) => {
   if (!src) return null;
   return (
     <div className="mt-5 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-      <img src={src} alt={alt} className="w-full object-cover" />
+      <img src={src} alt={alt} className="w-full object-cover" loading="lazy" />
     </div>
   );
 };
@@ -40,7 +117,8 @@ type CaseStudy = {
   process: React.ReactNode;
   outcome: React.ReactNode;
   outcomeImage?: string;
-  technologies: string[];
+  technologiesIcons: string[];
+  technologiesNames: string[];
   site?: string;
 };
 
@@ -51,7 +129,8 @@ const studiesBase = [
     overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468805/mycoach-header_ijp9oi.png",
     solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468807/mycoach-solution_b9fe3q.jpg",
     outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468805/mycoach-outcome_mmbvre.jpg",
-    technologies: ['React', 'Laravel', 'MySQL', 'Figma'],
+    technologiesIcons: [reactIcon, laravelIcon, mysqlIcon, figmaIcon],
+    technologiesNames: ['React', 'Laravel', 'MySQL', 'Figma'],
     site: 'https://mycoach.ma/',
   },
   {
@@ -60,7 +139,8 @@ const studiesBase = [
     overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468966/vouchify-header_cqbosp.png",
     solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468811/vouchify-solution_r1zyru.png",
     outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468810/vouchify-outcome_g7dwp0.png",
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma'],
+    technologiesIcons: [reactIcon, typescriptIcon, tailwindIcon, nodejsIcon, figmaIcon],
+    technologiesNames: ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Figma'],
     site: 'https://usevouchify.com/',
   },
   {
@@ -69,7 +149,8 @@ const studiesBase = [
     overviewImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468965/lifeline-header_bxs3bd.png",
     solutionImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468802/lifeline-solution_r8yn2k.png",
     outcomeImage: "https://res.cloudinary.com/dfks1mhg5/image/upload/v1782468802/lifeline-outcome_ocguwd.png",
-    technologies: ['TypeScript', 'React', 'Node.js', 'Figma'],
+    technologiesIcons: [typescriptIcon, reactIcon, nodejsIcon, figmaIcon],
+    technologiesNames: ['TypeScript', 'React', 'Node.js', 'Figma'],
     site: 'https://mylifeline.health/',
   },
 ];
@@ -184,12 +265,14 @@ export default function CaseStudies() {
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative"
             >
-              <button
-                onClick={() => setSelectedStudy(null)}
-                className="group absolute top-4 right-4 p-2 bg-white/60 hover:bg-white/80 rounded-full transition-colors z-10 cursor-pointer"
-              >
-                <X size={20} className="text-primary group-hover:rotate-90 transition-transform duration-300" />
-              </button>
+              <div className="sticky top-4 z-10 flex justify-end pr-4 -mb-12">
+                <button
+                  onClick={() => setSelectedStudy(null)}
+                  className="group p-2 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-full transition-colors cursor-pointer shadow-md"
+                >
+                  <X size={20} className="text-primary group-hover:rotate-90 transition-transform duration-300" />
+                </button>
+              </div>
 
               {/* Header image */}
               <div className="w-full h-64 md:h-80 relative bg-gray-100">
@@ -221,14 +304,7 @@ export default function CaseStudies() {
 
               <div className="p-8">
                 {/* Metrics */}
-                <motion.div className="grid grid-cols-3 gap-4 mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  {activeStudy.metrics.map((metric, i) => (
-                    <div key={i} className="text-center p-2 md:p-4 rounded-2xl border border-gray-100 bg-gray-50">
-                      <h4 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary mb-1">{metric.value}</h4>
-                      <p className="text-sm md:font-medium text-secondary">{metric.label}</p>
-                    </div>
-                  ))}
-                </motion.div>
+                <MetricsGrid metrics={activeStudy.metrics as { label: string; value: string }[]} />
 
                 <div className="space-y-8">
                   {/* Overview */}
@@ -300,10 +376,11 @@ export default function CaseStudies() {
                   {/* Technologies */}
                   <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h3 className="text-xl font-semibold text-brand mb-4">{t('work.technologies')}</h3>
-                    <div className="flex flex-wrap gap-3">
-                      {activeStudy.technologies.map(tech => (
-                        <span key={tech} className="px-4 py-2 border border-gray-200 rounded-full text-sm font-medium text-primary">
-                          {tech}
+                    <div className="flex flex-wrap gap-4">
+                      {activeStudy.technologiesIcons.map((tech, index) => (
+                        <span key={index} className="group flex flex-col items-center gap-2 p-2 pt-3 glass-card rounded-2xl text-xs font-medium text-secondary w-20 h-20 hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out">
+                          <img src={tech} alt={activeStudy.technologiesNames[index]} className="w-8 h-8 object-contain transition-transform group-hover:-scale-x-100" />
+                          <span className="group-hover:bg-gradient-brand group-hover:bg-clip-text group-hover:text-transparent transition-colors">{activeStudy.technologiesNames[index]}</span>
                         </span>
                       ))}
                     </div>

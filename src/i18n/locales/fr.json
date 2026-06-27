@@ -4,6 +4,7 @@
         "experience": "Expérience",
         "work": "Projets",
         "skills": "Compétences",
+        "services": "Services",
         "education": "Formation",
         "contact": "Contact",
         "letsTalk": "Discutons"
@@ -11,11 +12,13 @@
     "hero": {
         "tag": "Salut!",
         "title": "Je suis Mohsine Hourmat Allah,",
-        "subtitle1": "Fondateur, Product Designer",
-        "subtitle2": "Développeur Full-Stack",
+        "subtitle1": "Fondateur",
+        "subtitle2": "Product Designer",
+        "subtitle3": "Développeur Full-Stack",
         "description": "Je conçois et construis des produits numériques importants, des plateformes de marché aux applications SaaS. J'apporte la réflexion du fondateur à chaque projet que je touche.",
         "viewWork": "Voir mes projets",
         "bookACall": "Réserver un appel",
+        "available": "Disponible pour les projets Startup",
         "strip": [
             "3+ Ans d'Expérience",
             "Fondateur de Startup",

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 @layer base {
   body {
     @apply font-sans text-primary bg-background antialiased overflow-x-hidden scroll-smooth;
@@ -41,4 +46,12 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.type-animation-wrapper .type-animation::after,
+.type-animation-wrapper span::after {
+  color: #1D2939;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
 }

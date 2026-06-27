@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { TypeAnimation } from 'react-type-animation';
 import helloTagEn from '../assets/hero/hello-tag-en.svg';
 import helloTagFr from '../assets/hero/hello-tag-fr.svg';
 import linkedinIcon from '../assets/hero/linkedin-icon.svg';
@@ -8,6 +9,8 @@ import githubIcon from '../assets/hero/github-icon.svg';
 import mailIcon from '../assets/hero/mail-icon.svg';
 import { ExternalLink } from 'lucide-react';
 
+
+// ─── Strip ──────────────────────────────────────────────────────────────────────
 function Strip() {
   const { t } = useTranslation();
   return (
@@ -31,6 +34,7 @@ function Strip() {
 export default function Hero() {
   const { t, i18n } = useTranslation();
   const helloTag = i18n.language === 'fr' ? helloTagFr : helloTagEn;
+
   return (
     <section id="hero" className="relative pt-24 pb-8 md:pt-32 md:pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -66,21 +70,28 @@ export default function Hero() {
               <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#004F94]/20 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob -z-10 pointer-events-none"></div>
 
               <img src={helloTag} alt="" className='max-w-20 md:max-w-30 mb-2 md:mb-5' />
-              <h1 className="text-2xl  md:text-4xl font-semibold text-primary mb-6">
+              <h1 className="text-2xl md:text-4xl font-semibold text-primary mb-6">
                 {t('hero.title')}
                 <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">
-                  {t('hero.subtitle1')}<br />
-                </span>
-                &{' '}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary">
-                  {t('hero.subtitle2')}
+                <span className="type-animation-wrapper">
+                  <TypeAnimation
+                    key={i18n.language}
+                    sequence={[
+                      t('hero.subtitle1'), 1500,
+                      t('hero.subtitle2'), 1500,
+                      t('hero.subtitle3'), 1500,
+                    ]}
+                    speed={50}
+                    deletionSpeed={65}
+                    repeat={Infinity}
+                    className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary"
+                  />
                 </span>
               </h1>
               <p className="text-lg text-secondary mb-8 max-w-lg leading-relaxed">
                 {t('hero.description')}
               </p>
-              <div className=" flex justify-center">
+              <div className=" flex flex-col items-center gap-3">
                 <div className="flex items-center justify-center gap-4 px-2 py-2 w-fit">
                   <a href="#work" className="bg-gradient-brand text-white px-6 py-3 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:scale-102 duration-200 whitespace-nowrap">
                     {t('hero.viewWork')}
@@ -88,6 +99,13 @@ export default function Hero() {
                   <a href="https://calendar.app.google/T69N8yqQao4JQFvh7" target='_blank' rel='noopener noreferrer' className="group inline-flex items-center gap-2 bg-white text-primary border border-gray-200 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md transform hover:scale-102 duration-200 whitespace-nowrap">
                     {t('hero.bookACall')} <ExternalLink size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200' />
                   </a>
+                </div>
+                <div className="flex items-center justify-center gap-2 mt-1 mb-2">
+                  <div className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-brand opacity-75 animate-ping"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-brand"></span>
+                  </div>
+                  <p className='text-md bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary leading-relaxed text-center'>{t('hero.available')}</p>
                 </div>
               </div>
 

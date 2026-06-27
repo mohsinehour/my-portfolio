@@ -96,6 +96,7 @@ export default function Navbar() {
           <a href="#experience" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.experience')}</a>
           <a href="#work" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.work')}</a>
           <a href="#skills" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.skills')}</a>
+          <a href="#services" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.services')}</a>
           <a href="#education" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.education')}</a>
           <a href="#contact" className="relative text-secondary hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 hover:after:w-full transition-colors text-sm font-medium">{t('nav.contact')}</a>
         </div>
@@ -130,6 +131,7 @@ export default function Navbar() {
               <a href="#experience" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.experience')}</a>
               <a href="#work" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.work')}</a>
               <a href="#skills" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.skills')}</a>
+              <a href="#services" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.services')}</a>
               <a href="#education" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.education')}</a>
               <a href="#contact" className="block px-3 py-3 text-base font-medium text-secondary hover:text-brand hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>{t('nav.contact')}</a>
 
