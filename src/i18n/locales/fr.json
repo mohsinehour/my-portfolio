@@ -13,17 +13,17 @@
         "tag": "Salut!",
         "title": "Je suis Mohsine Hourmat Allah,",
         "subtitle1": "Fondateur",
-        "subtitle2": "Product Designer",
-        "subtitle3": "Développeur Full-Stack",
-        "description": "Je conçois et construis des produits numériques importants, des plateformes de marché aux applications SaaS. J'apporte la réflexion du fondateur à chaque projet que je touche.",
+        "subtitle2": "Product Manager",
+        "subtitle3": "Ingénieur Full-Stack",
+        "description": "Je gère et construis des produits numériques importants, des plateformes de marché aux applications SaaS. J'apporte la réflexion du fondateur à chaque projet que je touche.",
         "viewWork": "Voir mes projets",
         "bookACall": "Réserver un appel",
         "available": "Disponible pour les projets Startup",
         "strip": [
             "3+ Ans d'Expérience",
             "Fondateur de Startup",
-            "Product Designer",
-            "Développeur Full-Stack"
+            "Product Manager",
+            "Ingénieur Full-Stack"
         ]
     },
     "about": {
@@ -32,7 +32,7 @@
         "subtitle2": "Fondateur,",
         "subtitle3": "je conçois comme un",
         "subtitle4": "Artiste",
-        "description1": "Je suis Product Designer, Développeur Full-Stack et Fondateur de Startup, avec une rare combinaison d'expertise technique et de sensibilité au design. Mon travail se situe à l'intersection de l'ingénierie, de la créativité et de l'entrepreneuriat.",
+        "description1": "Je suis Product Manager, Ingénieur Full-Stack et Fondateur de Startup, avec une rare combinaison d'expertise technique et de sensibilité au design. Mon travail se situe à l'intersection de l'ingénierie, de la créativité et de l'entrepreneuriat.",
         "description2": "Après avoir étudié l'ingénierie en automatisation et obtenu un Master européen en applications intelligentes et Big Data, j'ai réorienté mes objectifs vers la création de produits numériques qui résolvent de vrais problèmes — des plateformes HealthTech aux marketplaces de coaching propulsées par l'IA.",
         "description3": "En tant que Co-fondateur et PDG de My Coach, j'ai porté toutes les casquettes possibles — stratégie produit, recherche UX, ingénierie et croissance. Cet esprit de fondateur guide tout ce que je conçois et construis.",
         "quote": "Je ne me contente pas de dessiner des écrans ou d'écrire du code. Je pense au produit dans sa globalité — le parcours utilisateur, le modèle économique, le levier de croissance, l'architecture technique. C'est ce qui fait la différence entre un bon travail et un excellent travail.",
@@ -117,7 +117,7 @@
                 },
                 "overview": [
                     "My Coach est une marketplace de coaching conçue pour aider les individus à découvrir, à se connecter avec et à réserver des entraîneurs personnels qualifiés en fonction de leurs objectifs et préférences. La plateforme vise à éliminer les frictions souvent associées à la recherche de coachs de confiance tout en fournissant aux entraîneurs des outils pour gérer et développer leur activité.",
-                    "En tant que co-fondateur, Product Designer et développeur Full-Stack, j'étais responsable de la transformation de l'idée en un MVP fonctionnel, de la direction de la stratégie produit, de la conception de l'expérience utilisateur et du développement de l'architecture de la plateforme."
+                    "En tant que co-fondateur, Product Manager et Ingénieur Full-Stack, j'étais responsable de la transformation de l'idée en un MVP fonctionnel, de la direction de la stratégie produit, de la conception de l'expérience utilisateur et du développement de l'architecture de la plateforme."
                 ],
                 "challenge": [
                     "De nombreuses personnes ont du mal à trouver des coachs sportifs de confiance qui correspondent à leurs besoins spécifiques. Les solutions existantes manquent souvent de transparence, de personnalisation et d'expériences de réservation fluides. Les coachs rencontrent également des difficultés pour gérer les relations clients et mettre en valeur leur expertise en ligne.",
@@ -168,7 +168,7 @@
                 },
                 "overview": [
                     "Vouchify est une plateforme numérique d'adhésions et de bons qui permet aux entreprises de créer, distribuer et gérer des pass numériques qui s'intègrent parfaitement aux portefeuilles mobiles.",
-                    "En tant que Développeur Full-Stack et Product Designer, j'ai travaillé à la fois sur l'expérience utilisateur et sur l'implémentation technique des fonctionnalités clés de la plateforme."
+                    "En tant que Ingénieur Full-Stack et Product Manager, j'ai travaillé à la fois sur l'expérience utilisateur et sur l'implémentation technique des fonctionnalités clés de la plateforme."
                 ],
                 "challenge": [
                     "Les systèmes traditionnels d'adhésion et de bons reposent souvent sur des processus obsolètes, créant des frictions pour les entreprises et les clients. Le défi consistait à créer une plateforme évolutive et intuitive qui simplifierait la création, la gestion et la distribution de pass."
@@ -219,7 +219,7 @@
                 },
                 "overview": [
                     "LifeLine est une plateforme de santé conçue pour améliorer l'accès aux services médicaux via des solutions numériques qui connectent les patients, les prestataires de soins de santé, les pharmacies et les assureurs. La plateforme comprend la prise de rendez-vous, les flux de travail d'assurance, les outils de gestion de pharmacie et les expériences d'engagement des patients.",
-                    "En tant que Product Designer et Développeur Frontend, j'ai contribué à la conception et à la mise en œuvre de plusieurs produits au sein de l'écosystème LifeLine."
+                    "En tant que Product Manager et Développeur Frontend, j'ai contribué à la conception et à la mise en œuvre de plusieurs produits au sein de l'écosystème LifeLine."
                 ],
                 "challenge": [
                     "Les flux de travail dans le domaine de la santé sont souvent complexes, fragmentés et difficiles à naviguer pour les patients. Les prestataires sont également confrontés à des défis opérationnels causés par des systèmes déconnectés et des processus inefficaces.",

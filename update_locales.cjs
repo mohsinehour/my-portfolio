@@ -16,7 +16,7 @@ en.work.caseStudies = {
     },
     overview: [
       'My Coach is a coaching marketplace designed to help individuals discover, connect with, and book qualified personal trainers based on their personal goals and preferences. The platform aims to remove the friction often associated with finding trusted coaches while providing trainers with tools to manage and grow their businesses.',
-      'As Co-Founder, Product Designer, and Full-Stack Developer, I was responsible for transforming the idea into a functional MVP, leading product strategy, designing the user experience, and developing the platform\'s architecture.'
+      'As Co-Founder, Product Manager, and Full-Stack Engineer, I was responsible for transforming the idea into a functional MVP, leading product strategy, designing the user experience, and developing the platform\'s architecture.'
     ],
     challenge: [
       'Many people struggle to find trustworthy fitness coaches who match their specific needs. Existing solutions often lack transparency, personalization, and streamlined booking experiences. Coaches also face challenges managing client relationships and showcasing their expertise online.',
@@ -51,7 +51,7 @@ en.work.caseStudies = {
     },
     overview: [
       'Vouchify is a digital membership and voucher platform that enables businesses to create, distribute, and manage digital passes that integrate seamlessly with mobile wallets.',
-      'As a Full-Stack Developer and Product Designer, I worked on both the user experience and technical implementation of key platform features.'
+      'As a Full-Stack Engineer and Product Manager, I worked on both the user experience and technical implementation of key platform features.'
     ],
     challenge: [
       'Traditional membership and voucher systems often rely on outdated processes, creating friction for both businesses and customers. The challenge was to create a scalable and intuitive platform that simplified pass creation, management, and distribution.'
@@ -87,7 +87,7 @@ en.work.caseStudies = {
     },
     overview: [
       'LifeLine is a healthcare platform designed to improve access to medical services through digital solutions that connect patients, healthcare providers, pharmacies, and insurers. The platform includes appointment booking, insurance workflows, pharmacy management tools, and patient engagement experiences.',
-      'As a Product Designer and Frontend Developer, I contributed to both the design and implementation of multiple products within the LifeLine ecosystem.'
+      'As a Product Manager and Frontend Developer, I contributed to both the design and implementation of multiple products within the LifeLine ecosystem.'
     ],
     challenge: [
       'Healthcare workflows are often complex, fragmented, and difficult for patients to navigate. Providers also face operational challenges caused by disconnected systems and inefficient processes.',
@@ -214,7 +214,7 @@ fr.work.caseStudies = {
     },
     overview: [
       'My Coach est une marketplace de coaching conçue pour aider les individus à découvrir, à se connecter avec et à réserver des entraîneurs personnels qualifiés en fonction de leurs objectifs et préférences. La plateforme vise à éliminer les frictions souvent associées à la recherche de coachs de confiance tout en fournissant aux entraîneurs des outils pour gérer et développer leur activité.',
-      'En tant que co-fondateur, Product Designer et développeur Full-Stack, j\'étais responsable de la transformation de l\'idée en un MVP fonctionnel, de la direction de la stratégie produit, de la conception de l\'expérience utilisateur et du développement de l\'architecture de la plateforme.'
+      'En tant que co-fondateur, Product Manager et Ingénieur Full-Stack, j\'étais responsable de la transformation de l\'idée en un MVP fonctionnel, de la direction de la stratégie produit, de la conception de l\'expérience utilisateur et du développement de l\'architecture de la plateforme.'
     ],
     challenge: [
       'De nombreuses personnes ont du mal à trouver des coachs sportifs de confiance qui correspondent à leurs besoins spécifiques. Les solutions existantes manquent souvent de transparence, de personnalisation et d\'expériences de réservation fluides. Les coachs rencontrent également des difficultés pour gérer les relations clients et mettre en valeur leur expertise en ligne.',
@@ -249,7 +249,7 @@ fr.work.caseStudies = {
     },
     overview: [
       'Vouchify est une plateforme numérique d\'adhésions et de bons qui permet aux entreprises de créer, distribuer et gérer des pass numériques qui s\'intègrent parfaitement aux portefeuilles mobiles.',
-      'En tant que Développeur Full-Stack et Product Designer, j\'ai travaillé à la fois sur l\'expérience utilisateur et sur l\'implémentation technique des fonctionnalités clés de la plateforme.'
+      'En tant que Ingénieur Full-Stack et Product Manager, j\'ai travaillé à la fois sur l\'expérience utilisateur et sur l\'implémentation technique des fonctionnalités clés de la plateforme.'
     ],
     challenge: [
       'Les systèmes traditionnels d\'adhésion et de bons reposent souvent sur des processus obsolètes, créant des frictions pour les entreprises et les clients. Le défi consistait à créer une plateforme évolutive et intuitive qui simplifierait la création, la gestion et la distribution de pass.'
@@ -285,7 +285,7 @@ fr.work.caseStudies = {
     },
     overview: [
       'LifeLine est une plateforme de santé conçue pour améliorer l\'accès aux services médicaux via des solutions numériques qui connectent les patients, les prestataires de soins de santé, les pharmacies et les assureurs. La plateforme comprend la prise de rendez-vous, les flux de travail d\'assurance, les outils de gestion de pharmacie et les expériences d\'engagement des patients.',
-      'En tant que Product Designer et Développeur Frontend, j\'ai contribué à la conception et à la mise en œuvre de plusieurs produits au sein de l\'écosystème LifeLine.'
+      'En tant que Product Manager et Développeur Frontend, j\'ai contribué à la conception et à la mise en œuvre de plusieurs produits au sein de l\'écosystème LifeLine.'
     ],
     challenge: [
       'Les flux de travail dans le domaine de la santé sont souvent complexes, fragmentés et difficiles à naviguer pour les patients. Les prestataires sont également confrontés à des défis opérationnels causés par des systèmes déconnectés et des processus inefficaces.',

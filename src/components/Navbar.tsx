@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { code: 'en', label: 'English', countryCode: 'GB' },
-  { code: 'fr', label: 'French', countryCode: 'FR' },
+  { code: 'en', label: 'EN', countryCode: 'GB' },
+  { code: 'fr', label: 'FR', countryCode: 'FR' },
 ];
 
 function LanguageDropdown() {
@@ -56,13 +56,13 @@ function LanguageDropdown() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -6, scale: 0.97 }}
           transition={{ duration: 0.15, ease: 'easeOut' }}
-          className="absolute right-0 top-full mt-2 w-36 bg-white rounded-2xl shadow-[0_8px_30px_rgba(17,17,17,0.12)] border border-gray-100 overflow-hidden z-50"
+          className="absolute right-0 top-full mt-2 w-28 bg-white rounded-2xl shadow-[0_8px_30px_rgba(17,17,17,0.12)] border border-gray-100 overflow-hidden z-50"
         >
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang)}
-              className="flex items-center gap-3 w-full px-4 py-3 text-sm text-primary hover:bg-gray-50 transition-colors cursor-pointer"
+              className="flex items-center gap-3 w-full px-2 py-3 text-sm text-primary hover:bg-gray-50 transition-colors cursor-pointer"
             >
               {/* Checkmark — visible only for selected */}
               <span className={`w-4 flex-shrink-0 ${selected.code === lang.code ? 'text-brand' : 'text-transparent'}`}>
@@ -76,6 +76,36 @@ function LanguageDropdown() {
           ))}
         </motion.div>
       )}
+    </div>
+  );
+}
+
+function LanguageToggle() {
+  const { i18n } = useTranslation();
+
+  const handleSelect = (code: string) => {
+    i18n.changeLanguage(code);
+  };
+
+  const currentLang = i18n.language || 'en';
+
+  return (
+    <div className="flex items-center bg-gray-100 p-1 rounded-full border border-gray-200/50">
+      {languages.map((lang) => (
+        <button
+          key={lang.code}
+          onClick={() => handleSelect(lang.code)}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${currentLang === lang.code
+            ? 'bg-white text-primary shadow-[0_2px_8px_rgba(0,0,0,0.08)]'
+            : 'text-secondary hover:text-primary hover:bg-gray-200/50'
+            }`}
+        >
+          <span className="w-4 h-4 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
+            <ReactCountryFlag countryCode={lang.countryCode} svg style={{ width: '1.2em', height: '1.2em', objectFit: 'cover' }} />
+          </span>
+          {lang.code.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 }
@@ -102,7 +132,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <LanguageDropdown />
+          <LanguageToggle />
           <a href="#contact" className="group inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md transform hover:scale-102 duration-200">
             {t('nav.letsTalk')} <ArrowUpRight size={16} className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200' />
           </a>

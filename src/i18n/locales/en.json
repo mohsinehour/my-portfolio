@@ -13,17 +13,17 @@
         "tag": "Hello!",
         "title": "I'm Mohsine Hourmat Allah,",
         "subtitle1": "Founder",
-        "subtitle2": "Product Designer",
-        "subtitle3": "Full-Stack Developer",
-        "description": "I design and build digital products that matter — from marketplace platforms to SaaS applications. I bring founder-level thinking to every project I touch.",
+        "subtitle2": "Product Manager",
+        "subtitle3": "Full-Stack Engineer",
+        "description": "I manage and build digital products that matter — from marketplace platforms to SaaS applications. I bring founder-level thinking to every project I touch.",
         "viewWork": "View My Work",
         "bookACall": "Book a Call",
         "available": "Available for Startup Projects",
         "strip": [
             "3+ Years Experience",
             "Startup Founder",
-            "Product Designer",
-            "Full-Stack Developer"
+            "Product Manager",
+            "Full-Stack Engineer"
         ]
     },
     "about": {
@@ -32,7 +32,7 @@
         "subtitle2": "Founder,",
         "subtitle3": "design like an",
         "subtitle4": "Artist",
-        "description1": "I'm a Product Designer, Full-Stack Developer, and Startup Founder with a rare combination of technical depth and design sensibility. My work sits at the intersection of engineering, creativity, and entrepreneurship.",
+        "description1": "I'm a Product Manager, Full-Stack Engineer, and Startup Founder with a rare combination of technical depth and design sensibility. My work sits at the intersection of engineering, creativity, and entrepreneurship.",
         "description2": "After studying Automation Engineering and earning a European Master in Intelligent Applications & Big Data, I shifted my focus to building digital products that solve real human problems — from HealthTech platforms to AI-powered coaching marketplaces.",
         "description3": "As Co-Founder and CEO of My Coach, I've worn every hat imaginable — product strategy, UX research, engineering, and growth. That founder mindset informs everything I design and build.",
         "quote": "I don't just design screens or write code. I think about the full product — the user's journey, the business model, the growth lever, the technical architecture. That's what makes the difference between good work and great work.",
@@ -117,7 +117,7 @@
                 },
                 "overview": [
                     "My Coach is a coaching marketplace designed to help individuals discover, connect with, and book qualified personal trainers based on their personal goals and preferences. The platform aims to remove the friction often associated with finding trusted coaches while providing trainers with tools to manage and grow their businesses.",
-                    "As Co-Founder, Product Designer, and Full-Stack Developer, I was responsible for transforming the idea into a functional MVP, leading product strategy, designing the user experience, and developing the platform's architecture."
+                    "As Co-Founder, Product Manager, and Full-Stack Engineer, I was responsible for transforming the idea into a functional MVP, leading product strategy, designing the user experience, and developing the platform's architecture."
                 ],
                 "challenge": [
                     "Many people struggle to find trustworthy fitness coaches who match their specific needs. Existing solutions often lack transparency, personalization, and streamlined booking experiences. Coaches also face challenges managing client relationships and showcasing their expertise online.",
@@ -168,7 +168,7 @@
                 },
                 "overview": [
                     "Vouchify is a digital membership and voucher platform that enables businesses to create, distribute, and manage digital passes that integrate seamlessly with mobile wallets.",
-                    "As a Full-Stack Developer and Product Designer, I worked on both the user experience and technical implementation of key platform features."
+                    "As a Full-Stack Engineer and Product Manager, I worked on both the user experience and technical implementation of key platform features."
                 ],
                 "challenge": [
                     "Traditional membership and voucher systems often rely on outdated processes, creating friction for both businesses and customers. The challenge was to create a scalable and intuitive platform that simplified pass creation, management, and distribution."
@@ -219,7 +219,7 @@
                 },
                 "overview": [
                     "LifeLine is a healthcare platform designed to improve access to medical services through digital solutions that connect patients, healthcare providers, pharmacies, and insurers. The platform includes appointment booking, insurance workflows, pharmacy management tools, and patient engagement experiences.",
-                    "As a Product Designer and Frontend Developer, I contributed to both the design and implementation of multiple products within the LifeLine ecosystem."
+                    "As a Product Manager and Frontend Developer, I contributed to both the design and implementation of multiple products within the LifeLine ecosystem."
                 ],
                 "challenge": [
                     "Healthcare workflows are often complex, fragmented, and difficult for patients to navigate. Providers also face operational challenges caused by disconnected systems and inefficient processes.",
