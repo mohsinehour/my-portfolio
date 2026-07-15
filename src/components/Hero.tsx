@@ -82,7 +82,7 @@ export default function Hero() {
                       t('hero.subtitle3'), 1500,
                     ]}
                     speed={50}
-                    deletionSpeed={65}
+                    deletionSpeed={75}
                     repeat={Infinity}
                     className="bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary"
                   />
